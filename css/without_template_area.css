@@ -1,0 +1,215 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.bgT { grid-area: 1 / 1 / 2 / 17; }
+
+.bgR { grid-area: 1 / 17 / 17 / 18; }
+
+.bgB { grid-area: 17 / 2 / 18 / 18; }
+
+.bgL { grid-area: 2 / 1 / 18 / 2; }
+
+.\31 BR { grid-area: 14 / 8 / 15 / 9; }
+
+.\32 BR { grid-area: 13 / 8 / 14 / 9; }
+
+.\33 BR { grid-area: 12 / 8 / 13 / 9; }
+
+.\34 BR { grid-area: 11 / 8 / 12 / 9; }
+
+.\35 BR { grid-area: 10 / 8 / 11 / 9; }
+
+.\36 BR { grid-area: 10 / 7 / 11 / 8; }
+
+.\37 BR { grid-area: 10 / 6 / 11 / 7; }
+
+.\38 BR { grid-area: 10 / 5 / 11 / 6; }
+
+.\39 BR { grid-area: 10 / 4 / 11 / 5; }
+
+.\31 0BR { grid-area: 10 / 3 / 11 / 4; }
+
+.\31 1BR { grid-area: 10 / 2 / 11 / 3; }
+
+.\31 2BR { grid-area: 9 / 2 / 10 / 3; }
+
+.\31 3BR { grid-area: 8 / 2 / 9 / 3; }
+
+.\31 TR { grid-area: 8 / 4 / 9 / 5; }
+
+.\32 TR { grid-area: 8 / 5 / 9 / 6; }
+
+.\33 TR { grid-area: 8 / 6 / 9 / 7; }
+
+.\34 TR { grid-area: 8 / 7 / 9 / 8; }
+
+.\35 TR { grid-area: 8 / 8 / 9 / 9; }
+
+.\36 TR { grid-area: 7 / 8 / 8 / 9; }
+
+.\37 TR { grid-area: 6 / 8 / 7 / 9; }
+
+.\38 TR { grid-area: 5 / 8 / 6 / 9; }
+
+.\39 TR { grid-area: 4 / 8 / 5 / 9; }
+
+.\31 0TR { grid-area: 3 / 8 / 4 / 9; }
+
+.\31 1TR { grid-area: 2 / 8 / 3 / 9; }
+
+.\31 2TR { grid-area: 2 / 9 / 3 / 10; }
+
+.\31 3TR { grid-area: 2 / 10 / 3 / 11; }
+
+.\31 TL { grid-area: 4 / 10 / 5 / 11; }
+
+.\32 TL { grid-area: 5 / 10 / 6 / 11; }
+
+.\33 TL { grid-area: 6 / 10 / 7 / 11; }
+
+.\34 TL { grid-area: 7 / 10 / 8 / 11; }
+
+.\35 TL { grid-area: 8 / 10 / 9 / 11; }
+
+.\36 TL { grid-area: 8 / 11 / 9 / 12; }
+
+.\37 TL { grid-area: 8 / 12 / 9 / 13; }
+
+.\38 TL { grid-area: 8 / 13 / 9 / 14; }
+
+.\39 TL { grid-area: 8 / 14 / 9 / 15; }
+
+.\31 0TL { grid-area: 8 / 15 / 9 / 16; }
+
+.\31 1TL { grid-area: 8 / 16 / 9 / 17; }
+
+.\31 2TL { grid-area: 9 / 16 / 10 / 17; }
+
+.\31 3TL { grid-area: 10 / 16 / 11 / 17; }
+
+.\31 BL { grid-area: 10 / 14 / 11 / 15; }
+
+.\32 BL { grid-area: 10 / 13 / 11 / 14; }
+
+.\33 BL { grid-area: 10 / 12 / 11 / 13; }
+
+.\34 BL { grid-area: 10 / 11 / 11 / 12; }
+
+.\35 BL { grid-area: 10 / 10 / 11 / 11; }
+
+.\36 BL { grid-area: 11 / 10 / 12 / 11; }
+
+.\37 BL { grid-area: 12 / 10 / 13 / 11; }
+
+.\38 BL { grid-area: 13 / 10 / 14 / 11; }
+
+.\39 BL { grid-area: 14 / 10 / 15 / 11; }
+
+.\31 0BL { grid-area: 15 / 10 / 16 / 11; }
+
+.\31 1BL { grid-area: 16 / 10 / 17 / 11; }
+
+.\31 2BL { grid-area: 16 / 9 / 17 / 10; }
+
+.\31 3BL { grid-area: 16 / 8 / 17 / 9; }
+
+.spawn1TL { grid-area: 3 / 3 / 4 / 4; }
+
+.spawn2TL { grid-area: 3 / 6 / 4 / 7; }
+
+.spawn3TL { grid-area: 6 / 3 / 7 / 4; }
+
+.spawn4TL { grid-area: 6 / 6 / 7 / 7; }
+
+.spawnTL { grid-area: 2 / 2 / 8 / 8; }
+
+.spawn1TR { grid-area: 3 / 12 / 4 / 13; }
+
+.spawn2TR { grid-area: 3 / 15 / 4 / 16; }
+
+.spawn3TR { grid-area: 6 / 12 / 7 / 13; }
+
+.spawn4TR { grid-area: 6 / 15 / 7 / 16; }
+
+.spawnTR { grid-area: 2 / 11 / 8 / 17; }
+
+.spawn1BR { grid-area: 12 / 12 / 13 / 13; }
+
+.spawn2BR { grid-area: 12 / 15 / 13 / 16; }
+
+.spawn3BR { grid-area: 15 / 12 / 16 / 13; }
+
+.spawn4BR { grid-area: 15 / 15 / 16 / 16; }
+
+.spawnBR { grid-area: 11 / 11 / 17 / 17; }
+
+.spawn1BL { grid-area: 12 / 3 / 13 / 4; }
+
+.spawn2BL { grid-area: 12 / 6 / 13 / 7; }
+
+.spawn3BL { grid-area: 15 / 3 / 16 / 4; }
+
+.spawn4BL { grid-area: 15 / 6 / 16 / 7; }
+
+.spawnBL { grid-area: 11 / 2 / 17 / 8; }
+
+.midt { grid-area: 9 / 9 / 10 / 10; }
+
+.\31 eT { grid-area: 3 / 9 / 4 / 10; }
+
+.\32 eT { grid-area: 4 / 9 / 5 / 10; }
+
+.\33 eT { grid-area: 5 / 9 / 6 / 10; }
+
+.\34 eT { grid-area: 6 / 9 / 7 / 10; }
+
+.\35 eT { grid-area: 7 / 9 / 8 / 10; }
+
+.\36 eT { grid-area: 8 / 9 / 9 / 10; }
+
+.\31 eR { grid-area: 9 / 15 / 10 / 16; }
+
+.\32 eR { grid-area: 9 / 14 / 10 / 15; }
+
+.\33 eR { grid-area: 9 / 13 / 10 / 14; }
+
+.\34 eR { grid-area: 9 / 12 / 10 / 13; }
+
+.\35 eR { grid-area: 9 / 11 / 10 / 12; }
+
+.\36 eR { grid-area: 9 / 10 / 10 / 11; }
+
+.\31 eL { grid-area: 9 / 3 / 10 / 4; }
+
+.\32 eL { grid-area: 9 / 4 / 10 / 5; }
+
+.\33 eL { grid-area: 9 / 5 / 10 / 6; }
+
+.\34 eL { grid-area: 9 / 6 / 10 / 7; }
+
+.\35 eL { grid-area: 9 / 7 / 10 / 8; }
+
+.\36 eL { grid-area: 9 / 8 / 10 / 9; }
+
+.\31 eB { grid-area: 15 / 9 / 16 / 10; }
+
+.\32 eB { grid-area: 14 / 9 / 15 / 10; }
+
+.\33 eB { grid-area: 13 / 9 / 14 / 10; }
+
+.\34 eB { grid-area: 12 / 9 / 13 / 10; }
+
+.\35 eB { grid-area: 11 / 9 / 12 / 10; }
+
+.\36 eB { grid-area: 10 / 9 / 11 / 10; }
+
+.\30 BR { grid-area: 15 / 8 / 16 / 9; }
+
+.\30 TR { grid-area: 8 / 3 / 9 / 4; }
+
+.\30 TL { grid-area: 3 / 10 / 4 / 11; }
+
+.\30 BL { grid-area: 10 / 15 / 11 / 16; }
