@@ -1,0 +1,8 @@
+body {
+  background-color: darkgrey;
+}
+.board {
+  background-color: black;
+  height: 200px;
+  width: 50%;
+}
