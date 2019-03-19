@@ -1,8 +1,8 @@
-2.grid-container {
+.grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-gap: 1px;
+  grid-gap: 10px;
   align-items: stretch;
 }
 
@@ -33,34 +33,6 @@
 .BR12 { grid-area: 8 / 1 / 9 / 2; }
 
 .BR13 { grid-area: 7 / 1 / 8 / 2; }
-
-.BL0 { grid-area: 9 / 14 / 10 / 15; }
-
-.BL1 { grid-area: 9 / 13 / 10 / 14; }
-
-.BL2 { grid-area: 9 / 12 / 10 / 13; }
-
-.BL3 { grid-area: 9 / 11 / 10 / 12; }
-
-.BL4 { grid-area: 9 / 10 / 10 / 11; }
-
-.BL5 { grid-area: 9 / 9 / 10 / 10; }
-
-.BL6 { grid-area: 10 / 9 / 11 / 10; }
-
-.BL7 { grid-area: 11 / 9 / 12 / 10; }
-
-.BL8 { grid-area: 12 / 9 / 13 / 10; }
-
-.BL9 { grid-area: 13 / 9 / 14 / 10; }
-
-.BL10 { grid-area: 14 / 9 / 15 / 10; }
-
-.BL11 { grid-area: 15 / 9 / 16 / 10; }
-
-.BL12 { grid-area: 15 / 8 / 16 / 9; }
-
-.BL13 { grid-area: 15 / 7 / 16 / 8; }
 
 .TL0 { grid-area: 7 / 2 / 8 / 3; }
 
@@ -118,6 +90,34 @@
 
 .TR13 { grid-area: 9 / 15 / 10 / 16; }
 
+.BL0 { grid-area: 9 / 14 / 10 / 15; }
+
+.BL1 { grid-area: 9 / 13 / 10 / 14; }
+
+.BL2 { grid-area: 9 / 12 / 10 / 13; }
+
+.BL3 { grid-area: 9 / 11 / 10 / 12; }
+
+.BL4 { grid-area: 9 / 10 / 10 / 11; }
+
+.BL5 { grid-area: 9 / 9 / 10 / 10; }
+
+.BL6 { grid-area: 10 / 9 / 11 / 10; }
+
+.BL7 { grid-area: 11 / 9 / 12 / 10; }
+
+.BL8 { grid-area: 12 / 9 / 13 / 10; }
+
+.BL9 { grid-area: 13 / 9 / 14 / 10; }
+
+.BL10 { grid-area: 14 / 9 / 15 / 10; }
+
+.BL11 { grid-area: 15 / 9 / 16 / 10; }
+
+.BL12 { grid-area: 15 / 8 / 16 / 9; }
+
+.BL13 { grid-area: 15 / 7 / 16 / 8; }
+
 .spawn1TL { grid-area: 2 / 2 / 3 / 3; }
 
 .spawn2TL { grid-area: 2 / 5 / 3 / 6; }
@@ -174,18 +174,6 @@
 
 .eR6 { grid-area: 8 / 9 / 9 / 10; }
 
-.eL1 { grid-area: 8 / 2 / 9 / 3; }
-
-.eL2 { grid-area: 8 / 3 / 9 / 4; }
-
-.eL3 { grid-area: 8 / 4 / 9 / 5; }
-
-.eL4 { grid-area: 8 / 5 / 9 / 6; }
-
-.eL5 { grid-area: 8 / 6 / 9 / 7; }
-
-.eL6 { grid-area: 8 / 7 / 9 / 8; }
-
 .eB1 { grid-area: 14 / 8 / 15 / 9; }
 
 .eB2 { grid-area: 13 / 8 / 14 / 9; }
@@ -198,12 +186,24 @@
 
 .eB6 { grid-area: 9 / 8 / 10 / 9; }
 
-.spawnBL { grid-area: 10 / 1 / 16 / 7; }
+.eL1 { grid-area: 8 / 2 / 9 / 3; }
 
-.spawnBR { grid-area: 10 / 10 / 16 / 16; }
+.eL2 { grid-area: 8 / 3 / 9 / 4; }
+
+.eL3 { grid-area: 8 / 4 / 9 / 5; }
+
+.eL4 { grid-area: 8 / 5 / 9 / 6; }
+
+.eL5 { grid-area: 8 / 6 / 9 / 7; }
+
+.eL6 { grid-area: 8 / 7 / 9 / 8; }
+
+.spawnBL { grid-area: 10 / 1 / 16 / 7; }
 
 .spawnTL { grid-area: 1 / 1 / 7 / 7; }
 
 .spawnTR { grid-area: 1 / 10 / 7 / 16; }
+
+.spawnBR { grid-area: 10 / 10 / 16 / 16; }
 
 .midt { grid-area: 8 / 8 / 9 / 9; }

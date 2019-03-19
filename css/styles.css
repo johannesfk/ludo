@@ -2,7 +2,33 @@ body {
   background-color: darkgrey;
 }
 .board {
+  background-color: darkred;
+  /* height: 500px;
+  width: 500px; */
+  padding: 10px;
+}
+
+.grid-container > div {
+  background-color: green;
+  padding: 20px 0;
+  text-align: center;
+}
+
+div[class^="BL"], div[class^="TL"], div[class^="TR"], div[class^="BR"] {
   background-color: black;
-  height: 200px;
-  width: 50%;
+}
+div[class^="eT"] {
+  background-color: yellow;
+}
+
+div[class^="eR"] {
+  background-color: blue;
+}
+
+div[class^="eB"] {
+  background-color: pink;
+}
+
+div[class^="eL"] {
+  background-color: orange;
 }
