@@ -17,60 +17,108 @@ body {
   width: 500px; */
   padding: 10px;
   width: 90vmin;
+  z-index: -99;
 }
 
 .grid-container > div {
   background-color: antiqueWhite;
   padding: 20px 0;
   text-align: center;
+  z-index: 1;
 }
 
 div[class^="BL"], div[class^="TL"], div[class^="TR"], div[class^="BR"] {
   background-color: var(--board-color);
+  z-index: 2;
 }
 div[class^="eT"] {
   background-color: var(--player2-color);
+  z-index: 2;
 }
 
 div[class^="eR"] {
   background-color: var(--player3-color);
+  z-index: 2;
 }
 
 div[class^="eB"] {
   background-color: var(--player4-color);
+  z-index: 2;
 }
 
 div[class^="eL"] {
   background-color: var(--player1-color);
+  z-index: 2;
 }
 
 div[class="TL0"] {
   background-color: var(--player1-color);
+  z-index: 2;
 }
 
 div[class="TR0"] {
   background-color: var(--player2-color);
+  z-index: 2;
 }
 
 div[class="BL0"] {
   background-color: var(--player3-color);
+  z-index: 2;
 }
 
 div[class="BR0"] {
   background-color: var(--player4-color);
+  z-index: 2;
 }
 
-div[class="spawn-TL"] {
-  background-color: (var(--player1-color);
-  z-index: 7;
-}
-
-div[class|=spawnBR] {
+div[class^="spawnTL"] {
   background-color: var(--player1-color);
-  z-index: 9;
+  z-index: 4;
 }
 
-div[class|=spawnBL] {
-  background-color: red;
-  z-index: 99;
+div[class^="spawnTR"] {
+  background-color: var(--player2-color);
+  z-index: 4;
+}
+
+div[class^="spawnBR"] {
+  background-color: var(--player3-color);
+  z-index: 4;
+}
+
+div[class^="spawnBL"] {
+  background-color: var(--player4-color);
+  z-index: 4;
+}
+
+.spawn-TL {
+  background-color: var(--player1-color);
+  filter: brightness(0.5);
+  z-index: 3
+}
+
+
+.spawn-TR {
+  background-color: var(--player2-color);
+  filter: brightness(0.5);
+  z-index: 3
+}
+
+.spawn-BR {
+  background-color: var(--player3-color);
+  filter: brightness(0.5);
+  z-index: 3
+}
+
+.spawn-BL {
+  background-color: var(--player4-color);
+  filter: brightness(0.5);
+  z-index: 3
+}
+
+.midt {
+  /* background-image: radial-gradient(circle, violet,red,orange,yellow,green,blue,indigo); */
+  background: linear-gradient(180deg, var(--player2-color), transparent 50%, var(--player4-color)),
+  linear-gradient(90deg, var(--player1-color), transparent 50%, var(--player3-color)) #888;
+  z-index: 3;
 }
