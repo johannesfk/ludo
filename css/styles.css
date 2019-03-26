@@ -1,34 +1,76 @@
+:root {
+  --player1-color:Blue;
+  --player2-color:red;
+  --player3-color:green;
+  --player4-color:yellow;
+  --bg-color:black;
+  --board-color:lightgrey;
+}
+
 body {
   background-color: darkgrey;
 }
+
 .board {
-  background-color: darkred;
+  background-color: var(--bg-color);
   /* height: 500px;
   width: 500px; */
   padding: 10px;
+  width: 90vmin;
 }
 
 .grid-container > div {
-  background-color: green;
+  background-color: antiqueWhite;
   padding: 20px 0;
   text-align: center;
 }
 
 div[class^="BL"], div[class^="TL"], div[class^="TR"], div[class^="BR"] {
-  background-color: black;
+  background-color: var(--board-color);
 }
 div[class^="eT"] {
-  background-color: yellow;
+  background-color: var(--player2-color);
 }
 
 div[class^="eR"] {
-  background-color: blue;
+  background-color: var(--player3-color);
 }
 
 div[class^="eB"] {
-  background-color: pink;
+  background-color: var(--player4-color);
 }
 
 div[class^="eL"] {
-  background-color: orange;
+  background-color: var(--player1-color);
+}
+
+div[class="TL0"] {
+  background-color: var(--player1-color);
+}
+
+div[class="TR0"] {
+  background-color: var(--player2-color);
+}
+
+div[class="BL0"] {
+  background-color: var(--player3-color);
+}
+
+div[class="BR0"] {
+  background-color: var(--player4-color);
+}
+
+div[class="spawn-TL"] {
+  background-color: (var(--player1-color);
+  z-index: 7;
+}
+
+div[class|=spawnBR] {
+  background-color: var(--player1-color);
+  z-index: 9;
+}
+
+div[class|=spawnBL] {
+  background-color: red;
+  z-index: 99;
 }

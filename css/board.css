@@ -118,37 +118,37 @@
 
 .BL13 { grid-area: 15 / 7 / 16 / 8; }
 
-.spawn1TL { grid-area: 2 / 2 / 3 / 3; }
+.spawnTL1 { grid-area: 2 / 2 / 3 / 3; }
 
-.spawn2TL { grid-area: 2 / 5 / 3 / 6; }
+.spawnTL2 { grid-area: 2 / 5 / 3 / 6; }
 
-.spawn3TL { grid-area: 5 / 2 / 6 / 3; }
+.spawnTL3 { grid-area: 5 / 2 / 6 / 3; }
 
-.spawn4TL { grid-area: 5 / 5 / 6 / 6; }
+.spawnTL4 { grid-area: 5 / 5 / 6 / 6; }
 
-.spawn1TR { grid-area: 2 / 11 / 3 / 12; }
+.spawnTR1 { grid-area: 2 / 11 / 3 / 12; }
 
-.spawn2TR { grid-area: 2 / 14 / 3 / 15; }
+.spawnTR2 { grid-area: 2 / 14 / 3 / 15; }
 
-.spawn3TR { grid-area: 5 / 11 / 6 / 12; }
+.spawnTR3 { grid-area: 5 / 11 / 6 / 12; }
 
-.spawn4TR { grid-area: 5 / 14 / 6 / 15; }
+.spawnTR4 { grid-area: 5 / 14 / 6 / 15; }
 
-.spawn1BR { grid-area: 11 / 11 / 12 / 12; }
+.spawnBR1 { grid-area: 11 / 11 / 12 / 12; }
 
-.spawn2BR { grid-area: 11 / 14 / 12 / 15; }
+.spawnBR2 { grid-area: 11 / 14 / 12 / 15; }
 
-.spawn3BR { grid-area: 14 / 11 / 15 / 12; }
+.spawnBR3 { grid-area: 14 / 11 / 15 / 12; }
 
-.spawn4BR { grid-area: 14 / 14 / 15 / 15; }
+.spawnBR4 { grid-area: 14 / 14 / 15 / 15; }
 
-.spawn1BL { grid-area: 11 / 2 / 12 / 3; }
+.spawnBL1 { grid-area: 11 / 2 / 12 / 3; }
 
-.spawn2BL { grid-area: 11 / 5 / 12 / 6; }
+.spawnBL2 { grid-area: 11 / 5 / 12 / 6; }
 
-.spawn3BL { grid-area: 14 / 2 / 15 / 3; }
+.spawnBL3 { grid-area: 14 / 2 / 15 / 3; }
 
-.spawn4BL { grid-area: 14 / 5 / 15 / 6; }
+.spawnBL4 { grid-area: 14 / 5 / 15 / 6; }
 
 .eT1 { grid-area: 2 / 8 / 3 / 9; }
 
@@ -198,12 +198,12 @@
 
 .eL6 { grid-area: 8 / 7 / 9 / 8; }
 
-.spawnBL { grid-area: 10 / 1 / 16 / 7; }
+.spawn-TL { grid-area: 1 / 1 / 7 / 7; }
 
-.spawnTL { grid-area: 1 / 1 / 7 / 7; }
+.spawn-TR { grid-area: 1 / 10 / 7 / 16; }
 
-.spawnTR { grid-area: 1 / 10 / 7 / 16; }
+.spawn-BR { grid-area: 10 / 10 / 16 / 16; }
 
-.spawnBR { grid-area: 10 / 10 / 16 / 16; }
+.spawn-BL { grid-area: 10 / 1 / 16 / 7; }
 
 .midt { grid-area: 8 / 8 / 9 / 9; }
