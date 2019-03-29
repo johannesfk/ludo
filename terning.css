@@ -1,4 +1,4 @@
-.box{
+.dice{
     width: 100px;
     margin: 200px auto;
     text-align: center;
@@ -6,13 +6,13 @@
 }
 
 
-.box-wrapper{
+.dice-wrapper{
     position: relative;
     transform-style: preserve-3d;
     -webkit-transform-style: preserve-3d;
 }
 
-.box-wrapper div{
+.dice-wrapper div{
     width: 98px;
     height: 98px;
     position: absolute;
@@ -21,36 +21,36 @@
 }
 
 
-.front{
+.dice-front{
     transform: translateZ(50px) rotateY(0deg);
     background-color: blue;
 }
-.back{
+.dice-back{
     transform: translateZ(-50px) rotateY(180deg);
     background-color: green;
 }
-.top{
+.dice-top{
     transform: translateY(-50px) rotateX(90deg);
     background-color: red;
 }
-.bottom{
+.dice-bottom{
     transform: translateY(50px) rotateX(-90deg);
     background-color: yellow;
 }
 
-.right{
+.dice-right{
     transform: translateX(50px) rotateY(90deg);
     background-color: orange;
 }
-.left{
+.dice-left{
     transform: translateX(-50px) rotateY(270deg);
     background-color: darkviolet;
 }
 
 
-.box .box-wrapper{
+.dice .dice-wrapper{
     transform: rotateX(-30deg) rotateY(-40deg);
 }
-.box .box-wrapper div{
+.dice .dice-wrapper div{
     /* background-color: lightgrey; */
 }
