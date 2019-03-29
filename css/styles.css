@@ -11,6 +11,7 @@ body {
   background-color: darkgrey;
 }
 
+
 .board {
   background-color: var(--bg-color);
   /* height: 500px;
@@ -18,10 +19,10 @@ body {
   padding: 10px;
   width: 90vmin;
   z-index: -99;
+  margin: 0 auto;
 }
 
 .grid-container > div {
-  background-color: antiqueWhite;
   padding: 20px 0;
   text-align: center;
   z-index: 1;
@@ -93,28 +94,30 @@ div[class^="spawnBL"] {
 
 .spawn-TL {
   background-color: var(--player1-color);
-  filter: brightness(0.5);
+  filter: brightness(0.9) saturate(0.3);
   z-index: 3
 }
 
 
 .spawn-TR {
   background-color: var(--player2-color);
-  filter: brightness(0.5);
+  filter: brightness(0.9) saturate(0.3);
   z-index: 3
 }
 
 .spawn-BR {
   background-color: var(--player3-color);
-  filter: brightness(0.5);
+  filter: brightness(0.8) saturate(0.3);
   z-index: 3
 }
 
 .spawn-BL {
   background-color: var(--player4-color);
-  filter: brightness(0.5);
+  filter: brightness(0.8) saturate(0.3);
+
   z-index: 3
 }
+
 
 .midt {
   /* background-image: radial-gradient(circle, violet,red,orange,yellow,green,blue,indigo); */
