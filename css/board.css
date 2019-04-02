@@ -6,33 +6,33 @@
   align-items: stretch;
 }
 
-.BR0 { grid-area: 14 / 7 / 15 / 8; }
+.BL0 { grid-area: 14 / 7 / 15 / 8; }
 
-.BR1 { grid-area: 13 / 7 / 14 / 8; }
+.BL1 { grid-area: 13 / 7 / 14 / 8; }
 
-.BR2 { grid-area: 12 / 7 / 13 / 8; }
+.BL2 { grid-area: 12 / 7 / 13 / 8; }
 
-.BR3 { grid-area: 11 / 7 / 12 / 8; }
+.BL3 { grid-area: 11 / 7 / 12 / 8; }
 
-.BR4 { grid-area: 10 / 7 / 11 / 8; }
+.BL4 { grid-area: 10 / 7 / 11 / 8; }
 
-.BR5 { grid-area: 9 / 7 / 10 / 8; }
+.BL5 { grid-area: 9 / 7 / 10 / 8; }
 
-.BR6 { grid-area: 9 / 6 / 10 / 7; }
+.BL6 { grid-area: 9 / 6 / 10 / 7; }
 
-.BR7 { grid-area: 9 / 5 / 10 / 6; }
+.BL7 { grid-area: 9 / 5 / 10 / 6; }
 
-.BR8 { grid-area: 9 / 4 / 10 / 5; }
+.BL8 { grid-area: 9 / 4 / 10 / 5; }
 
-.BR9 { grid-area: 9 / 3 / 10 / 4; }
+.BL9 { grid-area: 9 / 3 / 10 / 4; }
 
-.BR10 { grid-area: 9 / 2 / 10 / 3; }
+.BL10 { grid-area: 9 / 2 / 10 / 3; }
 
-.BR11 { grid-area: 9 / 1 / 10 / 2; }
+.BL11 { grid-area: 9 / 1 / 10 / 2; }
 
-.BR12 { grid-area: 8 / 1 / 9 / 2; }
+.BL12 { grid-area: 8 / 1 / 9 / 2; }
 
-.BR13 { grid-area: 7 / 1 / 8 / 2; }
+.BL13 { grid-area: 7 / 1 / 8 / 2; }
 
 .TL0 { grid-area: 7 / 2 / 8 / 3; }
 
@@ -90,33 +90,33 @@
 
 .TR13 { grid-area: 9 / 15 / 10 / 16; }
 
-.BL0 { grid-area: 9 / 14 / 10 / 15; }
+.BR0 { grid-area: 9 / 14 / 10 / 15; }
 
-.BL1 { grid-area: 9 / 13 / 10 / 14; }
+.BR1 { grid-area: 9 / 13 / 10 / 14; }
 
-.BL2 { grid-area: 9 / 12 / 10 / 13; }
+.BR2 { grid-area: 9 / 12 / 10 / 13; }
 
-.BL3 { grid-area: 9 / 11 / 10 / 12; }
+.BR3 { grid-area: 9 / 11 / 10 / 12; }
 
-.BL4 { grid-area: 9 / 10 / 10 / 11; }
+.BR4 { grid-area: 9 / 10 / 10 / 11; }
 
-.BL5 { grid-area: 9 / 9 / 10 / 10; }
+.BR5 { grid-area: 9 / 9 / 10 / 10; }
 
-.BL6 { grid-area: 10 / 9 / 11 / 10; }
+.BR6 { grid-area: 10 / 9 / 11 / 10; }
 
-.BL7 { grid-area: 11 / 9 / 12 / 10; }
+.BR7 { grid-area: 11 / 9 / 12 / 10; }
 
-.BL8 { grid-area: 12 / 9 / 13 / 10; }
+.BR8 { grid-area: 12 / 9 / 13 / 10; }
 
-.BL9 { grid-area: 13 / 9 / 14 / 10; }
+.BR9 { grid-area: 13 / 9 / 14 / 10; }
 
-.BL10 { grid-area: 14 / 9 / 15 / 10; }
+.BR10 { grid-area: 14 / 9 / 15 / 10; }
 
-.BL11 { grid-area: 15 / 9 / 16 / 10; }
+.BR11 { grid-area: 15 / 9 / 16 / 10; }
 
-.BL12 { grid-area: 15 / 8 / 16 / 9; }
+.BR12 { grid-area: 15 / 8 / 16 / 9; }
 
-.BL13 { grid-area: 15 / 7 / 16 / 8; }
+.BR13 { grid-area: 15 / 7 / 16 / 8; }
 
 .spawnTL1 { grid-area: 2 / 2 / 3 / 3; }
 

@@ -62,12 +62,12 @@ div[class="TR0"] {
   z-index: 2;
 }
 
-div[class="BL0"] {
+div[class="BR0"] {
   background-color: var(--player3-color);
   z-index: 2;
 }
 
-div[class="BR0"] {
+div[class="BL0"] {
   background-color: var(--player4-color);
   z-index: 2;
 }
