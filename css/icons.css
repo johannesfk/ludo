@@ -39,3 +39,10 @@
   }
 
 }
+
+.player1Piece {
+  height: 30px;
+  width: 30px;
+  background-color: var(--player1-color);
+  border-radius: 50%;
+}
