@@ -5,6 +5,7 @@
   --player4-color:yellow;
   --bg-color:black;
   --board-color:lightgrey;
+  --star-color:BlueViolet;
 }
 
 body {
@@ -18,12 +19,20 @@ body {
   width: 500px; */
   padding: 10px;
   width: 90vmin;
+  height: 90vmin;
   z-index: -99;
   margin: 0 auto;
 }
 
+.grid-container {
+  width: inherit;
+  height: inherit;
+}
+
 .grid-container > div {
-  padding: 20px 0;
+  /* padding: 20px 0; */
+  width: auto;
+  height: auto;
   text-align: center;
   z-index: 1;
 }
