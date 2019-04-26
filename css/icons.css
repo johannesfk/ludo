@@ -6,11 +6,29 @@
   color: var(--star-color)
 }
 
-.player1Piece {
+.playerPiece {
   height: 30px;
   width: 30px;
-  background-color: var(--player1-color);
   border-radius: 50%;
   display: inline-block;
-  z-index: 99999;
+  z-index: 999;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.player1 {
+  background-color: var(--player1-color);
+}
+
+.player2 {
+  background-color: var(--player2-color);
+}
+
+.player3{
+  background-color: var(--player3-color);
+}
+
+.player4 {
+  background-color: var(--player4-color);
 }

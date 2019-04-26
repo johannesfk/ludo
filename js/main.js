@@ -41,22 +41,22 @@ var routePlayer4 = ["BL0", "BL1", "BL2", "BL3", "BL4", "BL5", "BL6", "BL7", "BL8
 // "eL1", "eL2", "eL3", "eL4", "eL5", "eL6"
 
 // [currentPosition, lastPosition, lastMovedRound, fieldsMoved, fieldsLeft]
-var player1_1;
-var player1_2;
-var player1_3;
-var player1_4;
-var player2_1;
-var player2_2;
-var player2_3;
-var player2_4;
-var player3_1;
-var player3_2;
-var player3_3;
-var player3_4;
-var player4_1;
-var player4_2;
-var player4_3;
-var player4_4;
+var player1_1 = [];
+var player1_2 = [];
+var player1_3 = [];
+var player1_4 = [];
+var player2_1 = [];
+var player2_2 = [];
+var player2_3 = [];
+var player2_4 = [];
+var player3_1 = [];
+var player3_2 = [];
+var player3_3 = [];
+var player3_4 = [];
+var player4_1 = [];
+var player4_2 = [];
+var player4_3 = [];
+var player4_4 = [];
 
 var gameRound = 0;
 
@@ -79,3 +79,10 @@ if (gameRound == 0) {
   player4_3[0] = "spawnBL3";
   player4_4[0] = "spawnBL4";
 }
+
+
+// Dice
+
+var currentDiceInt = Math.floor(Math.random() * 6) + 1;
+
+document.getElementById("diceOut").innerHTML = currentDiceInt;
