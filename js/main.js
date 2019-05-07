@@ -81,5 +81,5 @@ if (gameRound == 0) {
   player4_3[0] = "spawnBL3";
   player4_4[0] = "spawnBL4";
 }
-
-$("#p1_1").appendTo($("routePlayer1[gameRound]"));
+// FIXME: the thing what moves the pieces
+$("<span class="playerPiece player1"></span>").appendTo("routePlayer1[gameRound]");
