@@ -111,7 +111,6 @@ div[class^="spawnBL"] {
   z-index: 3
 }
 
-
 .spawn-TR {
   background-color: var(--player2-color);
   filter: brightness(0.9) saturate(0.3);

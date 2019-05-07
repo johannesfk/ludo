@@ -12,13 +12,21 @@
 
     <link rel="stylesheet" href="./css/icons.css">
     <link rel="stylesheet" href="./css/layout.css">
+    <link rel="stylesheet" href="./css/elements.css">
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 
   </head>
   <body>
     <h1>LuDo - It's Just a Game</h1>
-    <h2>The dice hit <span id="diceOut"></span></h2>
+
+    <div id="die" class="dice">0</div>
+    <div></div>
+    <button onclick="rollDice()">Roll Dice</button>
+    <h2 id="diceOut" style="clear:left;"></h2>
+
     <div class="board">
       <div class="grid-container">
         <div class="TL0"></div>
@@ -30,9 +38,7 @@
         <div class="TL6"></div>
         <div class="TL7"></div>
         <div class="TL8"></div>
-        <div class="TL9">
-          <span class="fas fa-star"></span>
-        </div>
+        <div class="TL9"><span class="fas fa-star"></span></div>
         <div class="TL10"></div>
         <div class="TL11"></div>
         <div class="TL12"></div>
@@ -46,9 +52,7 @@
         <div class="TR6"></div>
         <div class="TR7"></div>
         <div class="TR8"></div>
-        <div class="TR9">
-          <span class="fas fa-star"></span>
-        </div>
+        <div class="TR9"><span class="fas fa-star"></span></div>
         <div class="TR10"></div>
         <div class="TR11"></div>
         <div class="TR12"></div>
@@ -62,9 +66,7 @@
         <div class="BR6"></div>
         <div class="BR7"></div>
         <div class="BR8"></div>
-        <div class="BR9">
-          <span class="fas fa-star"></span>
-        </div>
+        <div class="BR9"><span class="fas fa-star"></span></div>
         <div class="BR10"></div>
         <div class="BR11"></div>
         <div class="BR12"></div>
@@ -78,29 +80,27 @@
         <div class="BL6"></div>
         <div class="BL7"></div>
         <div class="BL8"></div>
-        <div class="BL9">
-          <span class="fas fa-star"></span>
-        </div>
+        <div class="BL9"><span class="fas fa-star"></span></div>
         <div class="BL10"></div>
         <div class="BL11"></div>
         <div class="BL12"></div>
         <div class="BL13"></div>
-        <div class="spawnTL1"><span class="playerPiece player1"></span></div>
-        <div class="spawnTL2"><span class="playerPiece player1"></span></div>
-        <div class="spawnTL3"><span class="playerPiece player1"></span></div>
-        <div class="spawnTL4"><span class="playerPiece player1"></span></div>
-        <div class="spawnTR1"><span class="playerPiece player2"></span></div>
-        <div class="spawnTR2"><span class="playerPiece player2"></span></div>
-        <div class="spawnTR3"><span class="playerPiece player2"></span></div>
-        <div class="spawnTR4"><span class="playerPiece player2"></span></div>
-        <div class="spawnBR1"><span class="playerPiece player3"></span></div>
-        <div class="spawnBR2"><span class="playerPiece player3"></span></div>
-        <div class="spawnBR3"><span class="playerPiece player3"></span></div>
-        <div class="spawnBR4"><span class="playerPiece player3"></span></div>
-        <div class="spawnBL1"><span class="playerPiece player4"></span></div>
-        <div class="spawnBL2"><span class="playerPiece player4"></span></div>
-        <div class="spawnBL3"><span class="playerPiece player4"></span></div>
-        <div class="spawnBL4"><span class="playerPiece player4"></span></div>
+        <div class="spawnTL1"><span id="p1_1" class="playerPiece player1"></span></div>
+        <div class="spawnTL2"><span id="p1_2" class="playerPiece player1"></span></div>
+        <div class="spawnTL3"><span id="p1_3" class="playerPiece player1"></span></div>
+        <div class="spawnTL4"><span id="p1_4" class="playerPiece player1"></span></div>
+        <div class="spawnTR1"><span id="p2_1" class="playerPiece player2"></span></div>
+        <div class="spawnTR2"><span id="p2_2" class="playerPiece player2"></span></div>
+        <div class="spawnTR3"><span id="p2_3" class="playerPiece player2"></span></div>
+        <div class="spawnTR4"><span id="p2_4" class="playerPiece player2"></span></div>
+        <div class="spawnBR1"><span id="p3_1" class="playerPiece player3"></span></div>
+        <div class="spawnBR2"><span id="p3_2" class="playerPiece player3"></span></div>
+        <div class="spawnBR3"><span id="p3_3" class="playerPiece player3"></span></div>
+        <div class="spawnBR4"><span id="p3_4" class="playerPiece player3"></span></div>
+        <div class="spawnBL1"><span id="p4_1" class="playerPiece player4"></span></div>
+        <div class="spawnBL2"><span id="p4_2" class="playerPiece player4"></span></div>
+        <div class="spawnBL3"><span id="p4_3" class="playerPiece player4"></span></div>
+        <div class="spawnBL4"><span id="p4_4" class="playerPiece player4"></span></div>
         <div class="eT1"></div>
         <div class="eT2"></div>
         <div class="eT3"></div>
@@ -130,10 +130,10 @@
         <div class="spawn-BR"></div>
         <div class="spawn-BL"></div>
         <div class="midt"></div>
-
-
-        <script src="./js/main.js" charset="utf-8"></script>
       </div>
     </div>
+
+    <script src="./js/main.js" charset="utf-8"></script>
+    <script src="./js/dice.js" charset="utf-8"></script>
   </body>
 </html>

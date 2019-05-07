@@ -60,6 +60,8 @@ var player4_4 = [];
 
 var gameRound = 0;
 
+var diceHits = ["Start of round"];
+
 // Initial startup procedures
 if (gameRound == 0) {
   player1_1[0] = "spawnTL1";
@@ -80,9 +82,4 @@ if (gameRound == 0) {
   player4_4[0] = "spawnBL4";
 }
 
-
-// Dice
-
-var currentDiceInt = Math.floor(Math.random() * 6) + 1;
-
-document.getElementById("diceOut").innerHTML = currentDiceInt;
+$("#p1_1").appendTo($("routePlayer1[gameRound]"));
