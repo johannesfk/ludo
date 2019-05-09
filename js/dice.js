@@ -5,5 +5,6 @@ function rollDice() {
     die.innerHTML = currentDiceInt;
     diceOut.innerHTML = "You rolled "+currentDiceInt+".";
     diceHits.unshift(currentDiceInt);
-    gameRound = gameRound + 1;
+    gameRound += 1;
+    movePiece();
 }
