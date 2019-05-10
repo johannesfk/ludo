@@ -62,41 +62,51 @@ var gameRound = 0;
 
 var diceHits = ["Start of round"];
 
+var currentPlayerID = 0;
+
 // Initial startup procedures
 if (gameRound == 0) {
-  player1_1[0] = "spawnTL1";
-  player1_2[0] = "spawnTL2";
-  player1_3[0] = "spawnTL3";
-  player1_4[0] = "spawnTL4";
-  player2_1[0] = "spawnTR1";
-  player2_2[0] = "spawnTR2";
-  player2_3[0] = "spawnTR3";
-  player2_4[0] = "spawnTR4";
-  player3_1[0] = "spawnBR1";
-  player3_2[0] = "spawnBR2";
-  player3_3[0] = "spawnBR3";
-  player3_4[0] = "spawnBR4";
-  player4_1[0] = "spawnBL1";
-  player4_2[0] = "spawnBL2";
-  player4_3[0] = "spawnBL3";
-  player4_4[0] = "spawnBL4";
+  player1_1 = ["spawnTL1", "", 0, 0, 61];
+  player1_2 = ["spawnTL2", "", 0, 0, 61];
+  player1_3 = ["spawnTL3", "", 0, 0, 61];
+  player1_4 = ["spawnTR1", "", 0, 0, 61];
+  player2_1 = ["spawnTR2", "", 0, 0, 61];
+  player2_2 = ["spawnTR3", "", 0, 0, 61];
+  player2_3 = ["spawnTR4", "", 0, 0, 61];
+  player2_4 = ["spawnBR1", "", 0, 0, 61];
+  player3_1 = ["spawnBR2", "", 0, 0, 61];
+  player3_2 = ["spawnBR3", "", 0, 0, 61];
+  player3_3 = ["spawnBR4", "", 0, 0, 61];
+  player3_4 = ["spawnBL1", "", 0, 0, 61];
+  player4_1 = ["spawnBL2", "", 0, 0, 61];
+  player4_2 = ["spawnBL3", "", 0, 0, 61];
+  player4_3 = ["spawnBL4", "", 0, 0, 61];
+  player4_4 = ["spawnBL4", "", 0, 0, 61];
 }
 
 function movePiece() {
-  $( "#p1_1" ).appendTo(routePlayer1[gameRound]);
-  $( "#p1_2" ).appendTo(1 + routePlayer1[gameRound]);
-  $( "#p1_3" ).appendTo(2 + routePlayer1[gameRound]);
-  $( "#p1_4" ).appendTo(3 + routePlayer1[gameRound]);
-  $( "#p2_1" ).appendTo(routePlayer2[gameRound]);
-  $( "#p2_2" ).appendTo(1 + routePlayer2[gameRound]);
-  $( "#p2_3" ).appendTo(2 + routePlayer2[gameRound]);
-  $( "#p2_4" ).appendTo(3 + routePlayer2[gameRound]);
-  $( "#p3_1" ).appendTo(routePlayer3[gameRound]);
-  $( "#p3_2" ).appendTo(1 + routePlayer3[gameRound]);
-  $( "#p3_3" ).appendTo(2 + routePlayer3[gameRound]);
-  $( "#p3_4" ).appendTo(3 + routePlayer3[gameRound]);
-  $( "#p4_1" ).appendTo(routePlayer4[gameRound]);
-  $( "#p4_2" ).appendTo(1 + routePlayer4[gameRound]);
-  $( "#p4_3" ).appendTo(2 + routePlayer4[gameRound]);
-  $( "#p4_4" ).appendTo(3 + routePlayer4[gameRound]);
+  if (currentPlayerID == 0 || 2 != 5) {
+    player1_1[3] += diceHits[0];
+    player1_1[4] = 61 - player1_1[3];
+    if (player1_1[4] <= 0) {
+      $( "#p1_1" ).remove();
+    } else {
+      $( "#p1_1" ).appendTo(routePlayer1[player1_1[3]]);
+    }
+  }
+  if (currentPlayerID == 1) {
+    player2_1[3] += diceHits[0];
+    player2_1[4] = 61 - player2_1[3];
+    $( "#p2_1" ).appendTo(routePlayer2[player2_1[3]]);
+  }
+  if (currentPlayerID == 2) {
+    player3_1[3] += diceHits[0];
+    player3_1[4] = 61 - player3_1[3];
+    $( "#p3_1" ).appendTo(routePlayer3[player3_1[3]]);
+  }
+  if (currentPlayerID == 3) {
+    player4_1[3] += diceHits[0];
+    player4_1[4] = 61 - player4_1[3];
+    $( "#p4_1" ).appendTo(routePlayer4[player4_1[3]]);
+  }
 }
