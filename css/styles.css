@@ -22,6 +22,7 @@ body {
   height: 90vmin;
   z-index: -99;
   margin: 0 auto;
+  border-radius: 1.5%;
 }
 
 .grid-container {
@@ -84,21 +85,25 @@ div[class="BL0"] {
 div[class^="spawnTL"] {
   background-color: var(--player1-color);
   z-index: 4;
+  border-radius: 30%;
 }
 
 div[class^="spawnTR"] {
   background-color: var(--player2-color);
   z-index: 4;
+  border-radius: 30%;
 }
 
 div[class^="spawnBR"] {
   background-color: var(--player3-color);
   z-index: 4;
+  border-radius: 30%;
 }
 
 div[class^="spawnBL"] {
   background-color: var(--player4-color);
   z-index: 4;
+  border-radius: 30%;
 }
 
 /* div[class^="spawn"]:not(.playerPiece, .spawn-TL, .spawn-TR, .spawn-BR, .spawn-BL) {
