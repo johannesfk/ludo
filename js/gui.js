@@ -27,4 +27,5 @@ function printRoundStatus() {
   }
   document.getElementById("roundStatus").innerHTML = currentPlayerColor;
   document.getElementById("roundStatus").style.color = currentPlayerColor;
+  
 }

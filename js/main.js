@@ -94,6 +94,7 @@ var player3Pieces = ["p3_1", "p3_2", "p3_3", "p3_4"];
 var player4Pieces = ["p4_1", "p4_2", "p4_3", "p4_4"];
 
 function pieceSelector(clicked_id) {
+  chosenPiece = clicked_id;
   if (currentPlayerID == 0 && player1Pieces.includes(chosenPiece)) {
     movePiece();
   }
@@ -106,8 +107,6 @@ function pieceSelector(clicked_id) {
   if (currentPlayerID == 3 && player4Pieces.includes(chosenPiece)) {
     movePiece();
   }
-
-  chosenPiece = clicked_id;
   document.getElementById("currentPieceStatus").innerHTML = chosenPiece;
 }
 // Funtionen som sørger for at rykke brikkerne rundt.
