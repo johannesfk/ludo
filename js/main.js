@@ -7,28 +7,32 @@
 
 // Defining the route each piece has to make before the player piece is secured
 var routePlayer1 = [".TL0", ".TL1", ".TL2", ".TL3", ".TL4", ".TL5", ".TL6", ".TL7", ".TL8", ".TL9", ".TL10", ".TL11", ".TL12", ".TL13",
-"TR0", ".TR1", ".TR2", ".TR3", ".TR4", ".TR5", ".TR6", ".TR7", ".TR8", ".TR9", ".TR10", ".TR11", ".TR12", ".TR13",
-"BR0", ".BR1", ".BR2", ".BR3", ".BR4", ".BR5", ".BR6", ".BR7", ".BR8", ".BR9", ".BR10", ".BR11", ".BR12", ".BR13",
-"BL0", ".BL1", ".BL2", ".BL3", ".BL4", ".BL5", ".BL6", ".BL7", ".BL8", ".BL9", ".BL10", ".BL11", ".BL12",
-"eL1", ".eL2", ".eL3", ".eL4", ".eL5", ".eL6"];
+  "TR0", ".TR1", ".TR2", ".TR3", ".TR4", ".TR5", ".TR6", ".TR7", ".TR8", ".TR9", ".TR10", ".TR11", ".TR12", ".TR13",
+  "BR0", ".BR1", ".BR2", ".BR3", ".BR4", ".BR5", ".BR6", ".BR7", ".BR8", ".BR9", ".BR10", ".BR11", ".BR12", ".BR13",
+  "BL0", ".BL1", ".BL2", ".BL3", ".BL4", ".BL5", ".BL6", ".BL7", ".BL8", ".BL9", ".BL10", ".BL11", ".BL12",
+  "eL1", ".eL2", ".eL3", ".eL4", ".eL5", ".eL6"
+];
 
 var routePlayer2 = ["TR0", ".TR1", ".TR2", ".TR3", ".TR4", ".TR5", ".TR6", ".TR7", ".TR8", ".TR9", ".TR10", ".TR11", ".TR12", ".TR13",
-"BR0", ".BR1", ".BR2", ".BR3", ".BR4", ".BR5", ".BR6", ".BR7", ".BR8", ".BR9", ".BR10", ".BR11", ".BR12", ".BR13",
-"BL0", ".BL1", ".BL2", ".BL3", ".BL4", ".BL5", ".BL6", ".BL7", ".BL8", ".BL9", ".BL10", ".BL11", ".BL12", ".BL13",
-"TL0", ".TL1", ".TL2", ".TL3", ".TL4", ".TL5", ".TL6", ".TL7", ".TL8", ".TL9", ".TL10", ".TL11", ".TL12",
-"eT1", ".eT2", ".eT3", ".eT4", ".eT5", ".eT6"];
+  "BR0", ".BR1", ".BR2", ".BR3", ".BR4", ".BR5", ".BR6", ".BR7", ".BR8", ".BR9", ".BR10", ".BR11", ".BR12", ".BR13",
+  "BL0", ".BL1", ".BL2", ".BL3", ".BL4", ".BL5", ".BL6", ".BL7", ".BL8", ".BL9", ".BL10", ".BL11", ".BL12", ".BL13",
+  "TL0", ".TL1", ".TL2", ".TL3", ".TL4", ".TL5", ".TL6", ".TL7", ".TL8", ".TL9", ".TL10", ".TL11", ".TL12",
+  "eT1", ".eT2", ".eT3", ".eT4", ".eT5", ".eT6"
+];
 
 var routePlayer3 = ["BR0", ".BR1", ".BR2", ".BR3", ".BR4", ".BR5", ".BR6", ".BR7", ".BR8", ".BR9", ".BR10", ".BR11", ".BR12", ".BR13",
-"BL0", ".BL1", ".BL2", ".BL3", ".BL4", ".BL5", ".BL6", ".BL7", ".BL8", ".BL9", ".BL10", ".BL11", ".BL12", ".BL13",
-"TL0", ".TL1", ".TL2", ".TL3", ".TL4", ".TL5", ".TL6", ".TL7", ".TL8", ".TL9", ".TL10", ".TL11", ".TL12", ".TL13",
-"TR0", ".TR1", ".TR2", ".TR3", ".TR4", ".TR5", ".TR6", ".TR7", ".TR8", ".TR9", ".TR10", ".TR11", ".TR12",
-"eR1", ".eR2", ".eR3", ".eR4", ".eR5", ".eR6"];
+  "BL0", ".BL1", ".BL2", ".BL3", ".BL4", ".BL5", ".BL6", ".BL7", ".BL8", ".BL9", ".BL10", ".BL11", ".BL12", ".BL13",
+  "TL0", ".TL1", ".TL2", ".TL3", ".TL4", ".TL5", ".TL6", ".TL7", ".TL8", ".TL9", ".TL10", ".TL11", ".TL12", ".TL13",
+  "TR0", ".TR1", ".TR2", ".TR3", ".TR4", ".TR5", ".TR6", ".TR7", ".TR8", ".TR9", ".TR10", ".TR11", ".TR12",
+  "eR1", ".eR2", ".eR3", ".eR4", ".eR5", ".eR6"
+];
 
 var routePlayer4 = ["BL0", ".BL1", ".BL2", ".BL3", ".BL4", ".BL5", ".BL6", ".BL7", ".BL8", ".BL9", ".BL10", ".BL11", ".BL12", ".BL13",
-"TL0", ".TL1", ".TL2", ".TL3", ".TL4", ".TL5", ".TL6", ".TL7", ".TL8", ".TL9", ".TL10", ".TL11", ".TL12", ".TL13",
-"TR0", ".TR1", ".TR2", ".TR3", ".TR4", ".TR5", ".TR6", ".TR7", ".TR8", ".TR9", ".TR10", ".TR11", ".TR12", ".TR13",
-"BR0", ".BR1", ".BR2", ".BR3", ".BR4", ".BR5", ".BR6", ".BR7", ".BR8", ".BR9", ".BR10", ".BR11", ".BR12",
-"eB1", ".eB2", ".eB3", ".eB4", ".eB5", ".eB6"];
+  "TL0", ".TL1", ".TL2", ".TL3", ".TL4", ".TL5", ".TL6", ".TL7", ".TL8", ".TL9", ".TL10", ".TL11", ".TL12", ".TL13",
+  "TR0", ".TR1", ".TR2", ".TR3", ".TR4", ".TR5", ".TR6", ".TR7", ".TR8", ".TR9", ".TR10", ".TR11", ".TR12", ".TR13",
+  "BR0", ".BR1", ".BR2", ".BR3", ".BR4", ".BR5", ".BR6", ".BR7", ".BR8", ".BR9", ".BR10", ".BR11", ".BR12",
+  "eB1", ".eB2", ".eB3", ".eB4", ".eB5", ".eB6"
+];
 
 // "TL0", "TL1", "TL2", "TL3", "TL4", "TL5", "TL6", "TL7", "TL8", "TL9", "TL10", "TL11", "TL12", "TL13",
 // "TR0", "TR1", "TR2", "TR3", "TR4", "TR5", "TR6", "TR7", "TR8", "TR9", "TR10", "TR11", "TR12", "TR13",
@@ -62,41 +66,174 @@ var gameRound = 0;
 
 var diceHits = ["Start of round"];
 
+var currentPlayerID = 0;
+var chosenPiece;
 // Initial startup procedures
 if (gameRound == 0) {
-  player1_1[0] = "spawnTL1";
-  player1_2[0] = "spawnTL2";
-  player1_3[0] = "spawnTL3";
-  player1_4[0] = "spawnTL4";
-  player2_1[0] = "spawnTR1";
-  player2_2[0] = "spawnTR2";
-  player2_3[0] = "spawnTR3";
-  player2_4[0] = "spawnTR4";
-  player3_1[0] = "spawnBR1";
-  player3_2[0] = "spawnBR2";
-  player3_3[0] = "spawnBR3";
-  player3_4[0] = "spawnBR4";
-  player4_1[0] = "spawnBL1";
-  player4_2[0] = "spawnBL2";
-  player4_3[0] = "spawnBL3";
-  player4_4[0] = "spawnBL4";
+  player1_1 = ["spawnTL1", "", 0, 0, 61];
+  player1_2 = ["spawnTL2", "", 0, 0, 61];
+  player1_3 = ["spawnTL3", "", 0, 0, 61];
+  player1_4 = ["spawnTR1", "", 0, 0, 61];
+  player2_1 = ["spawnTR2", "", 0, 0, 61];
+  player2_2 = ["spawnTR3", "", 0, 0, 61];
+  player2_3 = ["spawnTR4", "", 0, 0, 61];
+  player2_4 = ["spawnBR1", "", 0, 0, 61];
+  player3_1 = ["spawnBR2", "", 0, 0, 61];
+  player3_2 = ["spawnBR3", "", 0, 0, 61];
+  player3_3 = ["spawnBR4", "", 0, 0, 61];
+  player3_4 = ["spawnBL1", "", 0, 0, 61];
+  player4_1 = ["spawnBL2", "", 0, 0, 61];
+  player4_2 = ["spawnBL3", "", 0, 0, 61];
+  player4_3 = ["spawnBL4", "", 0, 0, 61];
+  player4_4 = ["spawnBL4", "", 0, 0, 61];
 }
 
+function pieceSelector(clicked_id) {
+  chosenPiece = clicked_id;
+  alert("You chose: " + chosenPiece);
+}
+// Funtionen som sørger for at rykke brikkerne rundt.
+// Dette burde kunne optrimeres ved chosenPiece[]
+// men det virker tilsyndelandende ikke.
 function movePiece() {
-  $( "#p1_1" ).appendTo(routePlayer1[gameRound]);
-  $( "#p1_2" ).appendTo(1 + routePlayer1[gameRound]);
-  $( "#p1_3" ).appendTo(2 + routePlayer1[gameRound]);
-  $( "#p1_4" ).appendTo(3 + routePlayer1[gameRound]);
-  $( "#p2_1" ).appendTo(routePlayer2[gameRound]);
-  $( "#p2_2" ).appendTo(1 + routePlayer2[gameRound]);
-  $( "#p2_3" ).appendTo(2 + routePlayer2[gameRound]);
-  $( "#p2_4" ).appendTo(3 + routePlayer2[gameRound]);
-  $( "#p3_1" ).appendTo(routePlayer3[gameRound]);
-  $( "#p3_2" ).appendTo(1 + routePlayer3[gameRound]);
-  $( "#p3_3" ).appendTo(2 + routePlayer3[gameRound]);
-  $( "#p3_4" ).appendTo(3 + routePlayer3[gameRound]);
-  $( "#p4_1" ).appendTo(routePlayer4[gameRound]);
-  $( "#p4_2" ).appendTo(1 + routePlayer4[gameRound]);
-  $( "#p4_3" ).appendTo(2 + routePlayer4[gameRound]);
-  $( "#p4_4" ).appendTo(3 + routePlayer4[gameRound]);
+  // Spiller 1 - blå
+  if (currentPlayerID == 0) {
+    // Brik 1
+    if (chosenPiece == "p1_1" && player1_1[4] > 0) {
+      player1_1[3] += diceHits[0];
+      player1_1[4] = 61 - player1_1[3];
+      $("#p1_1").appendTo(routePlayer1[player1_1[3]]);
+    } else if (p1_1[4] <= 0) {
+      $("#p1_1").remove();
+    }
+    // Brik 2
+    if (chosenPiece == "p1_2" && player1_2[4] > 0) {
+      player1_2[3] += diceHits[0];
+      player1_2[4] = 61 - player1_2[3];
+      $("#p1_1").appendTo(routePlayer1[player1_2[3]]);
+    } else if (p1_2[4] <= 0) {
+      $("#p1_2").remove();
+    }
+    // Brik 3
+    if (chosenPiece == "p1_3" && player1_3[4] > 0) {
+      player1_3[3] += diceHits[0];
+      player1_3[4] = 61 - player1_3[3];
+      $("#p1_3").appendTo(routePlayer1[player1_3[3]]);
+    } else if (p1_3[4] <= 0) {
+      $("#p1_3").remove();
+    }
+    // Brik 4
+    if (chosenPiece == "p1_4" && player1_4[4] > 0) {
+      player1_4[3] += diceHits[0];
+      player1_4[4] = 61 - player1_4[3];
+      $("#p1_4").appendTo(routePlayer1[player1_4[3]]);
+    } else if (p1_4[4] <= 0) {
+      $("#p1_4").remove();
+    }
+  }
+  // Spiller 2 - rød
+  if (currentPlayerID == 1) {
+    // Brik 1
+    if (chosenPiece == "p2_1" && player2_1[4] > 0) {
+      player2_1[3] += diceHits[0];
+      player2_1[4] = 61 - player2_1[3];
+      $("#p2_1").appendTo(routePlayer2[player2_1[3]]);
+    } else if (p2_1[4] <= 0) {
+      $("#p2_1").remove();
+    }
+    // Brik 2
+    if (chosenPiece == "p2_2" && player2_2[4] > 0) {
+      player2_2[3] += diceHits[0];
+      player2_2[4] = 61 - player2_2[3];
+      $("#p2_2").appendTo(routePlayer2[player2_2[3]]);
+    } else if (p2_2[4] <= 0) {
+      $("#p2_2").remove();
+    }
+    // Brik 3
+    if (chosenPiece == "p2_3" && player2_3[4] > 0) {
+      player2_3[3] += diceHits[0];
+      player2_3[4] = 61 - player2_3[3];
+      $("#p2_3").appendTo(routePlayer2[player2_3[3]]);
+    } else if (p2_3[4] <= 0) {
+      $("#p2_3").remove();
+    }
+    // Brik 4
+    if (chosenPiece == "p2_4" && player2_4[4] > 0) {
+      player2_4[3] += diceHits[0];
+      player2_4[4] = 61 - player2_4[3];
+      $("#p2_4").appendTo(routePlayer2[player2_4[3]]);
+    } else if (p2_4[4] <= 0) {
+      $("#p2_4").remove();
+    }
+  }
+  // Spiller 3 - grøn
+  if (currentPlayerID == 2) {
+    // Brik 1
+    if (chosenPiece == "p3_1" && player3_1[4] > 0) {
+      player3_1[3] += diceHits[0];
+      player3_1[4] = 61 - player3_1[3];
+      $("#p3_1").appendTo(routePlayer3[player3_1[3]]);
+    } else if (p3_1[4] <= 0) {
+      $("#p3_1").remove();
+    }
+    // Brik 2
+    if (chosenPiece == "p3_2" && player3_2[4] > 0) {
+      player3_2[3] += diceHits[0];
+      player3_2[4] = 61 - player3_2[3];
+      $("#p3_2").appendTo(routePlayer3[player3_2[3]]);
+    } else if (p3_2[4] <= 0) {
+      $("#p3_2").remove();
+    }
+    // Brik 3
+    if (chosenPiece == "p3_3" && player3_3[4] > 0) {
+      player3_3[3] += diceHits[0];
+      player3_3[4] = 61 - player3_3[3];
+      $("#p3_3").appendTo(routePlayer3[player3_3[3]]);
+    } else if (p3_3[4] <= 0) {
+      $("#p3_3").remove();
+    }
+    // Brik 4
+    if (chosenPiece == "p3_4" && player3_4[4] > 0) {
+      player3_4[3] += diceHits[0];
+      player3_4[4] = 61 - player3_4[3];
+      $("#p3_4").appendTo(routePlayer3[player3_4[3]]);
+    } else if (p3_4[4] <= 0) {
+      $("#p3_4").remove();
+    }
+  }
+  // Spiller 4 - gul
+  if (currentPlayerID == 3) {
+    // Brik 1
+    if (chosenPiece == "p4_1" && player4_1[4] > 0) {
+      player4_1[3] += diceHits[0];
+      player4_1[4] = 61 - player4_1[3];
+      $("#p4_1").appendTo(routePlayer4[player4_1[3]]);
+    } else if (p4_1[4] <= 0) {
+      $("#p4_1").remove();
+    }
+    // Brik 2
+    if (chosenPiece == "p4_2" && player4_2[4] > 0) {
+      player4_2[3] += diceHits[0];
+      player4_2[4] = 61 - player4_2[3];
+      $("#p4_2").appendTo(routePlayer4[player4_2[3]]);
+    } else if (p4_2[4] <= 0) {
+      $("#p4_2").remove();
+    }
+    // Brik 3
+    if (chosenPiece == "p4_3" && player4_3[4] > 0) {
+      player4_3[3] += diceHits[0];
+      player4_3[4] = 61 - player4_3[3];
+      $("#p4_3").appendTo(routePlayer4[player4_3[3]]);
+    } else if (p4_3[4] <= 0) {
+      $("#p4_3").remove();
+    }
+    // Brik 4
+    if (chosenPiece == "p4_4" && player4_4[4] > 0) {
+      player4_4[3] += diceHits[0];
+      player4_4[4] = 61 - player4_4[3];
+      $("#p4_4").appendTo(routePlayer4[player4_4[3]]);
+    } else if (p4_4[4] <= 0) {
+      $("#p4_4").remove();
+    }
+  }
 }
