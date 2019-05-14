@@ -7,13 +7,4 @@ function rollDice() {
   diceOut.innerHTML = currentDiceInt;
   diceHits.unshift(currentDiceInt);
   printRoundStatus();
-  movePiece();
-  
-  // Changes current player per round
-  gameRound += 1;
-  if (currentPlayerID == 3) {
-    currentPlayerID = 0;
-  } else {
-    currentPlayerID += 1;
-  }
 }

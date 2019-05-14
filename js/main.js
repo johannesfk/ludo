@@ -88,9 +88,27 @@ if (gameRound == 0) {
   player4_4 = ["spawnBL4", "", 0, 0, 61];
 }
 
+var player1Pieces = ["p1_1", "p1_2", "p1_3", "p1_4"];
+var player2Pieces = ["p2_1", "p2_2", "p2_3", "p2_4"];
+var player3Pieces = ["p3_1", "p3_2", "p3_3", "p3_4"];
+var player4Pieces = ["p4_1", "p4_2", "p4_3", "p4_4"];
+
 function pieceSelector(clicked_id) {
+  if (currentPlayerID == 0 && player1Pieces.includes(chosenPiece)) {
+    movePiece();
+  }
+  if (currentPlayerID == 1 && player2Pieces.includes(chosenPiece)) {
+    movePiece();
+  }
+  if (currentPlayerID == 2 && player3Pieces.includes(chosenPiece)) {
+    movePiece();
+  }
+  if (currentPlayerID == 3 && player4Pieces.includes(chosenPiece)) {
+    movePiece();
+  }
+
   chosenPiece = clicked_id;
-  alert("You chose: " + chosenPiece);
+  document.getElementById("currentPieceStatus").innerHTML = chosenPiece;
 }
 // Funtionen som sørger for at rykke brikkerne rundt.
 // Dette burde kunne optrimeres ved chosenPiece[]
@@ -235,5 +253,16 @@ function movePiece() {
     } else if (p4_4[4] <= 0) {
       $("#p4_4").remove();
     }
+  }
+  nextRound();
+}
+
+function nextRound() {
+  // Changes current player per round
+  gameRound += 1;
+  if (currentPlayerID == 3) {
+    currentPlayerID = 0;
+  } else {
+    currentPlayerID += 1;
   }
 }
