@@ -14,21 +14,25 @@
     <link rel="stylesheet" href="./css/icons.css">
     <link rel="stylesheet" href="./css/layout.css">
     <link rel="stylesheet" href="./css/elements.css">
+    <!-- Star icon from fontawesome  -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/solid.css" integrity="sha384-ioUrHig76ITq4aEJ67dHzTvqjsAP/7IzgwE7lgJcg2r7BRNGYSK0LwSmROzYtgzs" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/fontawesome.css" integrity="sha384-sri+NftO+0hcisDKgr287Y/1LVnInHJ1l+XC7+FOabmTTIK0HnE2ID+xxvJ21c5J" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
   </head>
+
   <body onload="intStyle()">
     <h1>LuDo - It'S jUsT a GaMe</h1>
-
+    <!-- Dice GUI interface & buton -->
     <div id="die" class="dice">0</div>
     <div></div>
     <button onclick="rollDice()">Roll Dice</button>
     <h2 style="clear:left;">You rolled <span id="diceOut"></span>.</h2>
+    <!-- GUI debug and status elements -->
     <h3>Current player is <span id="roundStatus"></span>.</h3>
     <h4>Current piece is <span id="currentPieceStatus"></span></h4>
+    <!-- game board spawner -->
     <div class="board">
       <div class="grid-container">
         <div class="TL0"></div>
@@ -134,7 +138,7 @@
         <div class="midt"></div>
       </div>
     </div>
-
+    <!-- Loads javascript files -->
     <script src="./js/main.js" charset="utf-8"></script>
     <script src="./js/dice.js" charset="utf-8"></script>
     <script src="./js/gui.js" charset="utf-8"></script>
