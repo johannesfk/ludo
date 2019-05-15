@@ -6,8 +6,10 @@ function intStyle() {
   document.getElementById("roundStatus").style.color = currentPlayerColor;
 
   if (currentDiceInt == undefined) {
-    currentDiceInt = "#";
-    diceOut.innerHTML = currentDiceInt;
+    diceOut.innerHTML = "#";
+  }
+  if (currentDiceInt == undefined) {
+  document.getElementById("currentPieceStatus").innerHTML = "#";
   }
 }
 
@@ -27,6 +29,11 @@ function printRoundStatus() {
   document.getElementById("roundStatus").innerHTML = currentPlayerColor;
   document.getElementById("roundStatus").style.color = currentPlayerColor;
 }
-function debug() {
-  document.getElementById("dieState").innerHTML = "Die state = " + dieActive;
+function elementUpdates() {
+  if (dieActive == true) {
+    document.getElementById("dieState").innerHTML = "Roll the dice.";
+  } else {
+    document.getElementById("dieState").innerHTML = "Select piece.";
+  }
+  document.getElementById("currentPieceStatus").innerHTML = chosenPiece;
 }

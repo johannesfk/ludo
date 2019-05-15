@@ -8,7 +8,7 @@ function rollDice() {
     diceOut.innerHTML = currentDiceInt;
     diceHits.unshift(currentDiceInt);
     dieActive = false;
-    debug();
     printRoundStatus();
+    elementUpdates();
   }
 }

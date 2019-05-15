@@ -34,6 +34,7 @@ var routePlayer4 = ["BL0", ".BL1", ".BL2", ".BL3", ".BL4", ".BL5", ".BL6", ".BL7
   "eB1", ".eB2", ".eB3", ".eB4", ".eB5", ".eB6"
 ];
 
+// DE ENKELTE UNDERGRUPPER
 // "TL0", "TL1", "TL2", "TL3", "TL4", "TL5", "TL6", "TL7", "TL8", "TL9", "TL10", "TL11", "TL12", "TL13",
 // "TR0", "TR1", "TR2", "TR3", "TR4", "TR5", "TR6", "TR7", "TR8", "TR9", "TR10", "TR11", "TR12", "TR13",
 // "BR0", "BR1", "BR2", "BR3", "BR4", "BR5", "BR6", "BR7", "BR8", "BR9", "BR10", "BR11", "BR12", "BR13",
@@ -95,6 +96,7 @@ var player2Pieces = ["p2_1", "p2_2", "p2_3", "p2_4"];
 var player3Pieces = ["p3_1", "p3_2", "p3_3", "p3_4"];
 var player4Pieces = ["p4_1", "p4_2", "p4_3", "p4_4"];
 
+//Tjekker om der er trykket på en af ens egne briker.
 function pieceSelector(clicked_id) {
   chosenPiece = clicked_id;
   if (currentPlayerID == 0 && player1Pieces.includes(chosenPiece)) {
@@ -109,49 +111,8 @@ function pieceSelector(clicked_id) {
   if (currentPlayerID == 3 && player4Pieces.includes(chosenPiece)) {
     movePiece();
   }
-  document.getElementById("currentPieceStatus").innerHTML = chosenPiece;
+  elementUpdates();
 }
-
-// function isAllowedToMove() {
-//   if (currentPlayerID == 0) {
-//     if (player1_1[3] == 0) {
-//       if (diceHits[0] == 6) {
-//         movePiece();
-//       } else {
-//         nextRound();
-//       }
-//     } else {
-//       movePiece();
-//     }
-//     if (player1_2[3] == 0) {
-//       if (diceHits[0] == 6) {
-//         movePiece();
-//       } else {
-//         nextRound();
-//       }
-//     } else {
-//       movePiece();
-//     }
-//     if (player1_3[3] == 0) {
-//       if (diceHits[0] == 6) {
-//         movePiece();
-//       } else {
-//         nextRound();
-//       }
-//     } else {
-//       movePiece();
-//     }
-//     if (player1_4[3] == 0) {
-//       if (diceHits[0] == 6) {
-//         movePiece();
-//       } else {
-//         nextRound();
-//       }
-//     } else {
-//       movePiece();
-//     }
-//   }
-// }
 
 // Funtionen som sørger for at rykke brikkerne rundt.
 // Dette burde kunne optrimeres ved chosenPiece[]
@@ -407,7 +368,6 @@ function movePiece() {
 
 function nextRound() {
   dieActive = true;
-  debug();
   // Changes current player per round
   gameRound += 1;
   if (currentPlayerID == 3) {
@@ -415,4 +375,6 @@ function nextRound() {
   } else {
     currentPlayerID += 1;
   }
+  printRoundStatus();
+  elementUpdates();
 }
