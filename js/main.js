@@ -96,60 +96,60 @@ var player4Pieces = ["p4_1", "p4_2", "p4_3", "p4_4"];
 function pieceSelector(clicked_id) {
   chosenPiece = clicked_id;
   if (currentPlayerID == 0 && player1Pieces.includes(chosenPiece)) {
-    isAllowedToMove();
+    movePiece();
   }
   if (currentPlayerID == 1 && player2Pieces.includes(chosenPiece)) {
-    isAllowedToMove();
+    movePiece();
   }
   if (currentPlayerID == 2 && player3Pieces.includes(chosenPiece)) {
-    isAllowedToMove();
+    movePiece();
   }
   if (currentPlayerID == 3 && player4Pieces.includes(chosenPiece)) {
-    isAllowedToMove();
+    movePiece();
   }
   document.getElementById("currentPieceStatus").innerHTML = chosenPiece;
 }
 
-function isAllowedToMove() {
-  if (currentPlayerID == 0) {
-    if (player1_1[3] == 0) {
-      if (diceHits[0] == 6) {
-        movePiece();
-      } else {
-        nextRound();
-      }
-    } else {
-      movePiece();
-    }
-    if (player1_2[3] == 0) {
-      if (diceHits[0] == 6) {
-        movePiece();
-      } else {
-        nextRound();
-      }
-    } else {
-      movePiece();
-    }
-    if (player1_3[3] == 0) {
-      if (diceHits[0] == 6) {
-        movePiece();
-      } else {
-        nextRound();
-      }
-    } else {
-      movePiece();
-    }
-    if (player1_4[3] == 0) {
-      if (diceHits[0] == 6) {
-        movePiece();
-      } else {
-        nextRound();
-      }
-    } else {
-      movePiece();
-    }
-  }
-}
+// function isAllowedToMove() {
+//   if (currentPlayerID == 0) {
+//     if (player1_1[3] == 0) {
+//       if (diceHits[0] == 6) {
+//         movePiece();
+//       } else {
+//         nextRound();
+//       }
+//     } else {
+//       movePiece();
+//     }
+//     if (player1_2[3] == 0) {
+//       if (diceHits[0] == 6) {
+//         movePiece();
+//       } else {
+//         nextRound();
+//       }
+//     } else {
+//       movePiece();
+//     }
+//     if (player1_3[3] == 0) {
+//       if (diceHits[0] == 6) {
+//         movePiece();
+//       } else {
+//         nextRound();
+//       }
+//     } else {
+//       movePiece();
+//     }
+//     if (player1_4[3] == 0) {
+//       if (diceHits[0] == 6) {
+//         movePiece();
+//       } else {
+//         nextRound();
+//       }
+//     } else {
+//       movePiece();
+//     }
+//   }
+// }
 
 // Funtionen som sørger for at rykke brikkerne rundt.
 // Dette burde kunne optrimeres ved chosenPiece[]
@@ -166,31 +166,43 @@ function movePiece() {
         player1_1[4] = 61 - player1_1[3];
         $("#p1_1").appendTo(routePlayer1[player1_1[3]]);
       }
-    } else if (p1_1[4] <= 0) {
+    } else if (player1_1[4] <= 0) {
       $("#p1_1").remove();
     }
     // Brik 2
     if (chosenPiece == "p1_2" && player1_2[4] > 0) {
-      player1_2[3] += diceHits[0];
-      player1_2[4] = 61 - player1_2[3];
-      $("#p1_1").appendTo(routePlayer1[player1_2[3]]);
-    } else if (p1_2[4] <= 0) {
+      if (diceHits[0] != 6 && player1_2[3] == 0) {
+        nextRound();
+      } else {
+        player1_2[3] += diceHits[0];
+        player1_2[4] = 61 - player1_2[3];
+        $("#p1_2").appendTo(routePlayer1[player1_2[3]]);
+      }
+    } else if (player1_2[4] <= 0) {
       $("#p1_2").remove();
     }
     // Brik 3
     if (chosenPiece == "p1_3" && player1_3[4] > 0) {
-      player1_3[3] += diceHits[0];
-      player1_3[4] = 61 - player1_3[3];
-      $("#p1_3").appendTo(routePlayer1[player1_3[3]]);
-    } else if (p1_3[4] <= 0) {
+      if (diceHits[0] != 6 && player1_3[3] == 0) {
+        nextRound();
+      } else {
+        player1_3[3] += diceHits[0];
+        player1_3[4] = 61 - player1_3[3];
+        $("#p1_3").appendTo(routePlayer1[player1_3[3]]);
+      }
+    } else if (player1_3[4] <= 0) {
       $("#p1_3").remove();
     }
     // Brik 4
     if (chosenPiece == "p1_4" && player1_4[4] > 0) {
-      player1_4[3] += diceHits[0];
-      player1_4[4] = 61 - player1_4[3];
-      $("#p1_4").appendTo(routePlayer1[player1_4[3]]);
-    } else if (p1_4[4] <= 0) {
+      if (diceHits[0] != 6 && player1_4[3] == 0) {
+        nextRound();
+      } else {
+        player1_4[3] += diceHits[0];
+        player1_4[4] = 61 - player1_4[3];
+        $("#p1_4").appendTo(routePlayer1[player1_4[3]]);
+      }
+    } else if (player1_4[4] <= 0) {
       $("#p1_4").remove();
     }
   }
@@ -198,34 +210,50 @@ function movePiece() {
   if (currentPlayerID == 1) {
     // Brik 1
     if (chosenPiece == "p2_1" && player2_1[4] > 0) {
-      player2_1[3] += diceHits[0];
-      player2_1[4] = 61 - player2_1[3];
-      $("#p2_1").appendTo(routePlayer2[player2_1[3]]);
-    } else if (p2_1[4] <= 0) {
+      if (diceHits[0] != 6 && player2_1[3] == 0) {
+        nextRound();
+      } else {
+        player2_1[3] += diceHits[0];
+        player2_1[4] = 61 - player2_1[3];
+        $("#p2_1").appendTo(routePlayer2[player2_1[3]]);
+      }
+    } else if (player2_1[4] <= 0) {
       $("#p2_1").remove();
     }
     // Brik 2
     if (chosenPiece == "p2_2" && player2_2[4] > 0) {
-      player2_2[3] += diceHits[0];
-      player2_2[4] = 61 - player2_2[3];
-      $("#p2_2").appendTo(routePlayer2[player2_2[3]]);
-    } else if (p2_2[4] <= 0) {
+      if (diceHits[0] != 6 && player2_2[3] == 0) {
+        nextRound();
+      } else {
+        player2_2[3] += diceHits[0];
+        player2_2[4] = 61 - player2_2[3];
+        $("#p2_2").appendTo(routePlayer2[player2_2[3]]);
+      }
+    } else if (player2_2[4] <= 0) {
       $("#p2_2").remove();
     }
     // Brik 3
     if (chosenPiece == "p2_3" && player2_3[4] > 0) {
-      player2_3[3] += diceHits[0];
-      player2_3[4] = 61 - player2_3[3];
-      $("#p2_3").appendTo(routePlayer2[player2_3[3]]);
-    } else if (p2_3[4] <= 0) {
+      if (diceHits[0] != 6 && player2_3[3] == 0) {
+        nextRound();
+      } else {
+        player2_3[3] += diceHits[0];
+        player2_3[4] = 61 - player2_3[3];
+        $("#p2_3").appendTo(routePlayer2[player2_3[3]]);
+      }
+    } else if (player2_3[4] <= 0) {
       $("#p2_3").remove();
     }
     // Brik 4
     if (chosenPiece == "p2_4" && player2_4[4] > 0) {
-      player2_4[3] += diceHits[0];
-      player2_4[4] = 61 - player2_4[3];
-      $("#p2_4").appendTo(routePlayer2[player2_4[3]]);
-    } else if (p2_4[4] <= 0) {
+      if (diceHits[0] != 6 && player2_4[3] == 0) {
+        nextRound();
+      } else {
+        player2_4[3] += diceHits[0];
+        player2_4[4] = 61 - player2_4[3];
+        $("#p2_4").appendTo(routePlayer2[player2_4[3]]);
+      }
+    } else if (player2_4[4] <= 0) {
       $("#p2_4").remove();
     }
   }
@@ -233,34 +261,50 @@ function movePiece() {
   if (currentPlayerID == 2) {
     // Brik 1
     if (chosenPiece == "p3_1" && player3_1[4] > 0) {
-      player3_1[3] += diceHits[0];
-      player3_1[4] = 61 - player3_1[3];
-      $("#p3_1").appendTo(routePlayer3[player3_1[3]]);
-    } else if (p3_1[4] <= 0) {
+      if (diceHits[0] != 6 && player3_1[3] == 0) {
+        nextRound();
+      } else {
+        player3_1[3] += diceHits[0];
+        player3_1[4] = 61 - player3_1[3];
+        $("#p3_1").appendTo(routePlayer3[player3_1[3]]);
+      }
+    } else if (player3_1[4] <= 0) {
       $("#p3_1").remove();
     }
     // Brik 2
     if (chosenPiece == "p3_2" && player3_2[4] > 0) {
-      player3_2[3] += diceHits[0];
-      player3_2[4] = 61 - player3_2[3];
-      $("#p3_2").appendTo(routePlayer3[player3_2[3]]);
-    } else if (p3_2[4] <= 0) {
+      if (diceHits[0] != 6 && player3_2[3] == 0) {
+        nextRound();
+      } else {
+        player3_2[3] += diceHits[0];
+        player3_2[4] = 61 - player3_2[3];
+        $("#p3_2").appendTo(routePlayer3[player3_2[3]]);
+      }
+    } else if (player3_2[4] <= 0) {
       $("#p3_2").remove();
     }
     // Brik 3
     if (chosenPiece == "p3_3" && player3_3[4] > 0) {
-      player3_3[3] += diceHits[0];
-      player3_3[4] = 61 - player3_3[3];
-      $("#p3_3").appendTo(routePlayer3[player3_3[3]]);
-    } else if (p3_3[4] <= 0) {
+      if (diceHits[0] != 6 && player3_3[3] == 0) {
+        nextRound();
+      } else {
+        player3_3[3] += diceHits[0];
+        player3_3[4] = 61 - player3_3[3];
+        $("#p3_3").appendTo(routePlayer3[player3_3[3]]);
+      }
+    } else if (player3_3[4] <= 0) {
       $("#p3_3").remove();
     }
     // Brik 4
     if (chosenPiece == "p3_4" && player3_4[4] > 0) {
-      player3_4[3] += diceHits[0];
-      player3_4[4] = 61 - player3_4[3];
-      $("#p3_4").appendTo(routePlayer3[player3_4[3]]);
-    } else if (p3_4[4] <= 0) {
+      if (diceHits[0] != 6 && player3_4[3] == 0) {
+        nextRound();
+      } else {
+        player3_4[3] += diceHits[0];
+        player3_4[4] = 61 - player3_4[3];
+        $("#p3_4").appendTo(routePlayer3[player3_4[3]]);
+      }
+    } else if (player3_4[4] <= 0) {
       $("#p3_4").remove();
     }
   }
@@ -268,37 +312,54 @@ function movePiece() {
   if (currentPlayerID == 3) {
     // Brik 1
     if (chosenPiece == "p4_1" && player4_1[4] > 0) {
-      player4_1[3] += diceHits[0];
-      player4_1[4] = 61 - player4_1[3];
-      $("#p4_1").appendTo(routePlayer4[player4_1[3]]);
-    } else if (p4_1[4] <= 0) {
+      if (diceHits[0] != 6 && player4_1[3] == 0) {
+        nextRound();
+      } else {
+        player4_1[3] += diceHits[0];
+        player4_1[4] = 61 - player4_1[3];
+        $("#p4_1").appendTo(routePlayer4[player4_1[3]]);
+      }
+    } else if (player4_1[4] <= 0) {
       $("#p4_1").remove();
     }
     // Brik 2
     if (chosenPiece == "p4_2" && player4_2[4] > 0) {
-      player4_2[3] += diceHits[0];
-      player4_2[4] = 61 - player4_2[3];
-      $("#p4_2").appendTo(routePlayer4[player4_2[3]]);
-    } else if (p4_2[4] <= 0) {
+      if (diceHits[0] != 6 && player4_2[3] == 0) {
+        nextRound();
+      } else {
+        player4_2[3] += diceHits[0];
+        player4_2[4] = 61 - player4_2[3];
+        $("#p4_2").appendTo(routePlayer4[player4_2[3]]);
+      }
+    } else if (player4_2[4] <= 0) {
       $("#p4_2").remove();
     }
     // Brik 3
     if (chosenPiece == "p4_3" && player4_3[4] > 0) {
-      player4_3[3] += diceHits[0];
-      player4_3[4] = 61 - player4_3[3];
-      $("#p4_3").appendTo(routePlayer4[player4_3[3]]);
-    } else if (p4_3[4] <= 0) {
+      if (diceHits[0] != 6 && player4_3[3] == 0) {
+        nextRound();
+      } else {
+        player4_3[3] += diceHits[0];
+        player4_3[4] = 61 - player4_3[3];
+        $("#p4_3").appendTo(routePlayer4[player4_3[3]]);
+      }
+    } else if (player4_3[4] <= 0) {
       $("#p4_3").remove();
     }
     // Brik 4
     if (chosenPiece == "p4_4" && player4_4[4] > 0) {
-      player4_4[3] += diceHits[0];
-      player4_4[4] = 61 - player4_4[3];
-      $("#p4_4").appendTo(routePlayer4[player4_4[3]]);
-    } else if (p4_4[4] <= 0) {
+      if (diceHits[0] != 6 && player4_4[3] == 0) {
+        nextRound();
+      } else {
+        player4_4[3] += diceHits[0];
+        player4_4[4] = 61 - player4_4[3];
+        $("#p4_4").appendTo(routePlayer4[player4_4[3]]);
+      }
+    } else if (player4_4[4] <= 0) {
       $("#p4_4").remove();
     }
   }
+
   nextRound();
 }
 
