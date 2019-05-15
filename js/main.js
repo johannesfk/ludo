@@ -65,6 +65,8 @@ var player4_4 = [];
 var gameRound = 0;
 
 var diceHits = ["Start of round"];
+var dieActive = true;
+var allHome = true;
 
 var currentPlayerID = 0;
 var chosenPiece;
@@ -156,7 +158,17 @@ function pieceSelector(clicked_id) {
 // men det virker tilsyndelandende ikke.
 function movePiece() {
   // Spiller 1 - blå
+  //Tjekker om alle brikker er hjemme.
   if (currentPlayerID == 0) {
+    if ((player1_1[3]) == 0 &&
+      (player1_2[3]) == 0 &&
+      (player1_3[3]) == 0 &&
+      (player1_4[3]) == 0) {
+      allHome = true;
+      nextRound();
+    } else {
+      allHome = false;
+    }
     // Brik 1
     if (chosenPiece == "p1_1" && player1_1[4] > 0) {
       if (diceHits[0] != 6 && player1_1[3] == 0) {
@@ -207,7 +219,17 @@ function movePiece() {
     }
   }
   // Spiller 2 - rød
+  //Tjekker om alle brikker er hjemme.
   if (currentPlayerID == 1) {
+    if ((player2_1[3]) == 0 &&
+      (player2_2[3]) == 0 &&
+      (player2_3[3]) == 0 &&
+      (player2_4[3]) == 0) {
+      allHome = true;
+      nextRound();
+    } else {
+      allHome = false;
+    }
     // Brik 1
     if (chosenPiece == "p2_1" && player2_1[4] > 0) {
       if (diceHits[0] != 6 && player2_1[3] == 0) {
@@ -258,7 +280,18 @@ function movePiece() {
     }
   }
   // Spiller 3 - grøn
+
   if (currentPlayerID == 2) {
+    //Tjekker om alle brikker er hjemme.
+    if ((player3_1[3]) == 0 &&
+      (player3_2[3]) == 0 &&
+      (player3_3[3]) == 0 &&
+      (player3_4[3]) == 0) {
+      allHome = true;
+      nextRound();
+    } else {
+      allHome = false;
+    }
     // Brik 1
     if (chosenPiece == "p3_1" && player3_1[4] > 0) {
       if (diceHits[0] != 6 && player3_1[3] == 0) {
@@ -310,6 +343,16 @@ function movePiece() {
   }
   // Spiller 4 - gul
   if (currentPlayerID == 3) {
+    //Tjekker om alle brikker er hjemme.
+    if ((player4_1[3]) == 0 &&
+      (player4_2[3]) == 0 &&
+      (player4_3[3]) == 0 &&
+      (player4_4[3]) == 0) {
+      allHome = true;
+      nextRound();
+    } else {
+      allHome = false;
+    }
     // Brik 1
     if (chosenPiece == "p4_1" && player4_1[4] > 0) {
       if (diceHits[0] != 6 && player4_1[3] == 0) {
@@ -359,11 +402,12 @@ function movePiece() {
       $("#p4_4").remove();
     }
   }
-
   nextRound();
 }
 
 function nextRound() {
+  dieActive = true;
+  debug();
   // Changes current player per round
   gameRound += 1;
   if (currentPlayerID == 3) {
