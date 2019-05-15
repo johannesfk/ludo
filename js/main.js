@@ -109,6 +109,7 @@ function pieceSelector(clicked_id) {
   }
   document.getElementById("currentPieceStatus").innerHTML = chosenPiece;
 }
+
 // Funtionen som sørger for at rykke brikkerne rundt.
 // Dette burde kunne optrimeres ved chosenPiece[]
 // men det virker tilsyndelandende ikke.
