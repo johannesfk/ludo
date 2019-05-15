@@ -107,7 +107,7 @@ function pieceSelector(clicked_id) {
   if (currentPlayerID == 3 && player4Pieces.includes(chosenPiece)) {
     movePiece();
   }
-  document.getElementById("currentPieceStatus").innerHTML = chosenPiece;
+  elementUpdates();
 }
 
 // Funtionen som sørger for at rykke brikkerne rundt.

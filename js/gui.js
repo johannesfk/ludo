@@ -6,8 +6,10 @@ function intStyle() {
   document.getElementById("roundStatus").style.color = currentPlayerColor;
 
   if (currentDiceInt == undefined) {
-    currentDiceInt = "#";
-    diceOut.innerHTML = currentDiceInt;
+    diceOut.innerHTML = "#";
+  }
+  if (chosenPiece == undefined) {
+    document.getElementById("currentPieceStatus").innerHTML = "#";
   }
 }
 
@@ -27,5 +29,8 @@ function printRoundStatus() {
   }
   document.getElementById("roundStatus").innerHTML = currentPlayerColor;
   document.getElementById("roundStatus").style.color = currentPlayerColor;
+}
 
+function elementUpdates() {
+  document.getElementById("currentPieceStatus").innerHTML = chosenPiece;
 }
