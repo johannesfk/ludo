@@ -11,7 +11,6 @@ function intStyle() {
   }
 }
 
-// FIXME: Correct program solve progress.
 function printRoundStatus() {
   if (currentPlayerID == 0) {
     currentPlayerColor = "blue";
@@ -27,5 +26,7 @@ function printRoundStatus() {
   }
   document.getElementById("roundStatus").innerHTML = currentPlayerColor;
   document.getElementById("roundStatus").style.color = currentPlayerColor;
-
+}
+function debug() {
+  document.getElementById("dieState").innerHTML = "Die state = " + dieActive;
 }
