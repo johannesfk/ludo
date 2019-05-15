@@ -96,18 +96,167 @@ var player4Pieces = ["p4_1", "p4_2", "p4_3", "p4_4"];
 function pieceSelector(clicked_id) {
   chosenPiece = clicked_id;
   if (currentPlayerID == 0 && player1Pieces.includes(chosenPiece)) {
-    movePiece();
+    isAllowedToMove();
   }
   if (currentPlayerID == 1 && player2Pieces.includes(chosenPiece)) {
-    movePiece();
+    isAllowedToMove();
   }
   if (currentPlayerID == 2 && player3Pieces.includes(chosenPiece)) {
-    movePiece();
+    isAllowedToMove();
   }
   if (currentPlayerID == 3 && player4Pieces.includes(chosenPiece)) {
-    movePiece();
+    isAllowedToMove();
   }
   document.getElementById("currentPieceStatus").innerHTML = chosenPiece;
+}
+
+function isAllowedToMove() {
+  if (currentPlayerID == 0) {
+    if (player1_1[3] == 0) {
+      if (diceHits[0] == 6) {
+        movePiece();
+      } else if (diceHits[0] < 6) {
+        nextRound();
+      } else {
+        movePiece();
+      }
+    }
+    if (player1_2[3] == 0) {
+      if (diceHits[0] == 6) {
+        movePiece();
+      } else if (diceHits[0] < 6) {
+        nextRound();
+      } else {
+        movePiece();
+      }
+    }
+    if (player1_3[3] == 0) {
+      if (diceHits[0] == 6) {
+        movePiece();
+      } else if (diceHits[0] < 6) {
+        nextRound();
+      } else {
+        movePiece();
+      }
+    }
+    if (player1_4[3] == 0) {
+      if (diceHits[0] == 6) {
+        movePiece();
+      } else if (diceHits[0] < 6) {
+        nextRound();
+      } else {
+        movePiece();
+      }
+    }
+  }
+  if (currentPlayerID == 1) {
+    if (player2_1[3] == 0) {
+      if (diceHits[0] == 6) {
+        movePiece();
+      } else if (diceHits[0] < 6) {
+        nextRound();
+      } else {
+        movePiece();
+      }
+    }
+    if (player2_2[3] == 0) {
+      if (diceHits[0] == 6) {
+        movePiece();
+      } else if (diceHits[0] < 6) {
+        nextRound();
+      } else {
+        movePiece();
+      }
+    }
+    if (player2_3[3] == 0) {
+      if (diceHits[0] == 6) {
+        movePiece();
+      } else if (diceHits[0] < 6) {
+        nextRound();
+      } else {
+        movePiece();
+      }
+    }
+    if (player2_4[3] == 0) {
+      if (diceHits[0] == 6) {
+        movePiece();
+      } else if (diceHits[0] < 6) {
+        nextRound();
+      } else {
+        movePiece();
+      }
+    }
+  }
+  if (currentPlayerID == 2) {
+    if (player3_1[3] == 0) {
+      if (diceHits[0] == 6) {
+        movePiece();
+      } else if (diceHits[0] < 6) {
+        nextRound();
+      } else {
+        movePiece();
+      }
+    }
+    if (player3_2[3] == 0) {
+      if (diceHits[0] == 6) {
+        movePiece();
+      } else if (diceHits[0] < 6) {
+        nextRound();
+      } else {
+        movePiece();
+      }
+    }
+    if (player3_3[3] == 0) {
+      if (diceHits[0] == 6) {
+        movePiece();
+      } else if (diceHits[0] < 6) {
+        nextRound();
+      } else {
+        movePiece();
+      }
+    }
+    if (player3_4[3] == 0) {
+      if (diceHits[0] == 6) {
+        movePiece();
+      } else if (diceHits[0] < 6) {
+        nextRound();
+      } else {
+        movePiece();
+      }
+    }
+  }
+  if (currentPlayerID == 3) {
+    if (player4_1[3] == 0) {
+      if (diceHits[0] == 6) {
+        movePiece();
+      } else if (diceHits[0] < 6) {
+        nextRound();
+      } else {
+        movePiece();
+      }
+    }
+    if (player4_2[3] == 0) {
+      if (diceHits[0] == 6) {
+        movePiece();
+      } else {
+        nextRound();
+      }
+    }
+    if (player4_3[3] == 0) {
+      if (diceHits[0] == 6) {
+        movePiece();
+      } else {
+        nextRound();
+      }
+    }
+    if (player4_4[3] == 0) {
+      if (diceHits[0] < 6) {
+        movePiece();
+      } else {
+        nextRound();
+      }
+    }
+  }
 }
 
 // Funtionen som sørger for at rykke brikkerne rundt.
