@@ -113,137 +113,111 @@ function pieceSelector(clicked_id) {
 function isAllowedToMove() {
   if (currentPlayerID == 0) {
     if (player1_1[3] == 0) {
-      if (diceHits[0] == 6) {
+      if (diceHits[0] < 6) {
         movePiece();
-      } else if (diceHits[0] < 6) {
-        nextRound();
       } else {
-        movePiece();
+        nextRound();
       }
     }
     if (player1_2[3] == 0) {
-      if (diceHits[0] == 6) {
+      if (diceHits[0] < 6) {
         movePiece();
-      } else if (diceHits[0] < 6) {
-        nextRound();
       } else {
-        movePiece();
+        nextRound();
       }
     }
     if (player1_3[3] == 0) {
-      if (diceHits[0] == 6) {
+      if (diceHits[0] < 6) {
         movePiece();
-      } else if (diceHits[0] < 6) {
-        nextRound();
       } else {
-        movePiece();
+        nextRound();
       }
     }
     if (player1_4[3] == 0) {
-      if (diceHits[0] == 6) {
+      if (diceHits[0] < 6) {
         movePiece();
-      } else if (diceHits[0] < 6) {
-        nextRound();
       } else {
-        movePiece();
+        nextRound();
       }
     }
   }
   if (currentPlayerID == 1) {
     if (player2_1[3] == 0) {
-      if (diceHits[0] == 6) {
+      if (diceHits[0] < 6) {
         movePiece();
-      } else if (diceHits[0] < 6) {
-        nextRound();
       } else {
-        movePiece();
+        nextRound();
       }
     }
     if (player2_2[3] == 0) {
-      if (diceHits[0] == 6) {
+      if (diceHits[0] < 6) {
         movePiece();
-      } else if (diceHits[0] < 6) {
-        nextRound();
       } else {
-        movePiece();
+        nextRound();
       }
     }
     if (player2_3[3] == 0) {
-      if (diceHits[0] == 6) {
+      if (diceHits[0] < 6) {
         movePiece();
-      } else if (diceHits[0] < 6) {
-        nextRound();
       } else {
-        movePiece();
+        nextRound();
       }
     }
     if (player2_4[3] == 0) {
-      if (diceHits[0] == 6) {
+      if (diceHits[0] < 6) {
         movePiece();
-      } else if (diceHits[0] < 6) {
-        nextRound();
       } else {
-        movePiece();
+        nextRound();
       }
     }
   }
   if (currentPlayerID == 2) {
     if (player3_1[3] == 0) {
-      if (diceHits[0] == 6) {
+      if (diceHits[0] < 6) {
         movePiece();
-      } else if (diceHits[0] < 6) {
-        nextRound();
       } else {
-        movePiece();
+        nextRound();
       }
     }
     if (player3_2[3] == 0) {
-      if (diceHits[0] == 6) {
+      if (diceHits[0] < 6) {
         movePiece();
-      } else if (diceHits[0] < 6) {
-        nextRound();
       } else {
-        movePiece();
+        nextRound();
       }
     }
     if (player3_3[3] == 0) {
-      if (diceHits[0] == 6) {
+      if (diceHits[0] < 6) {
         movePiece();
-      } else if (diceHits[0] < 6) {
-        nextRound();
       } else {
-        movePiece();
+        nextRound();
       }
     }
     if (player3_4[3] == 0) {
-      if (diceHits[0] == 6) {
+      if (diceHits[0] < 6) {
         movePiece();
-      } else if (diceHits[0] < 6) {
-        nextRound();
       } else {
-        movePiece();
+        nextRound();
       }
     }
   }
   if (currentPlayerID == 3) {
     if (player4_1[3] == 0) {
-      if (diceHits[0] == 6) {
+      if (diceHits[0] < 6) {
         movePiece();
-      } else if (diceHits[0] < 6) {
-        nextRound();
       } else {
-        movePiece();
+        nextRound();
       }
     }
     if (player4_2[3] == 0) {
-      if (diceHits[0] == 6) {
+      if (diceHits[0] < 6) {
         movePiece();
       } else {
         nextRound();
       }
     }
     if (player4_3[3] == 0) {
-      if (diceHits[0] == 6) {
+      if (diceHits[0] < 6) {
         movePiece();
       } else {
         nextRound();
