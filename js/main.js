@@ -113,122 +113,40 @@ function pieceSelector(clicked_id) {
 function isAllowedToMove() {
   if (currentPlayerID == 0) {
     if (player1_1[3] == 0) {
-      if (diceHits[0] < 6) {
+      if (diceHits[0] == 6) {
         movePiece();
       } else {
         nextRound();
       }
+    } else {
+      movePiece();
     }
     if (player1_2[3] == 0) {
-      if (diceHits[0] < 6) {
+      if (diceHits[0] == 6) {
         movePiece();
       } else {
         nextRound();
       }
+    } else {
+      movePiece();
     }
     if (player1_3[3] == 0) {
-      if (diceHits[0] < 6) {
+      if (diceHits[0] == 6) {
         movePiece();
       } else {
         nextRound();
       }
+    } else {
+      movePiece();
     }
     if (player1_4[3] == 0) {
-      if (diceHits[0] < 6) {
+      if (diceHits[0] == 6) {
         movePiece();
       } else {
         nextRound();
       }
-    }
-  }
-  if (currentPlayerID == 1) {
-    if (player2_1[3] == 0) {
-      if (diceHits[0] < 6) {
-        movePiece();
-      } else {
-        nextRound();
-      }
-    }
-    if (player2_2[3] == 0) {
-      if (diceHits[0] < 6) {
-        movePiece();
-      } else {
-        nextRound();
-      }
-    }
-    if (player2_3[3] == 0) {
-      if (diceHits[0] < 6) {
-        movePiece();
-      } else {
-        nextRound();
-      }
-    }
-    if (player2_4[3] == 0) {
-      if (diceHits[0] < 6) {
-        movePiece();
-      } else {
-        nextRound();
-      }
-    }
-  }
-  if (currentPlayerID == 2) {
-    if (player3_1[3] == 0) {
-      if (diceHits[0] < 6) {
-        movePiece();
-      } else {
-        nextRound();
-      }
-    }
-    if (player3_2[3] == 0) {
-      if (diceHits[0] < 6) {
-        movePiece();
-      } else {
-        nextRound();
-      }
-    }
-    if (player3_3[3] == 0) {
-      if (diceHits[0] < 6) {
-        movePiece();
-      } else {
-        nextRound();
-      }
-    }
-    if (player3_4[3] == 0) {
-      if (diceHits[0] < 6) {
-        movePiece();
-      } else {
-        nextRound();
-      }
-    }
-  }
-  if (currentPlayerID == 3) {
-    if (player4_1[3] == 0) {
-      if (diceHits[0] < 6) {
-        movePiece();
-      } else {
-        nextRound();
-      }
-    }
-    if (player4_2[3] == 0) {
-      if (diceHits[0] < 6) {
-        movePiece();
-      } else {
-        nextRound();
-      }
-    }
-    if (player4_3[3] == 0) {
-      if (diceHits[0] < 6) {
-        movePiece();
-      } else {
-        nextRound();
-      }
-    }
-    if (player4_4[3] == 0) {
-      if (diceHits[0] < 6) {
-        movePiece();
-      } else {
-        nextRound();
-      }
+    } else {
+      movePiece();
     }
   }
 }
@@ -241,9 +159,13 @@ function movePiece() {
   if (currentPlayerID == 0) {
     // Brik 1
     if (chosenPiece == "p1_1" && player1_1[4] > 0) {
-      player1_1[3] += diceHits[0];
-      player1_1[4] = 61 - player1_1[3];
-      $("#p1_1").appendTo(routePlayer1[player1_1[3]]);
+      if (diceHits[0] != 6 && player1_1[3] == 0) {
+        nextRound();
+      } else {
+        player1_1[3] += diceHits[0];
+        player1_1[4] = 61 - player1_1[3];
+        $("#p1_1").appendTo(routePlayer1[player1_1[3]]);
+      }
     } else if (p1_1[4] <= 0) {
       $("#p1_1").remove();
     }
