@@ -116,7 +116,8 @@ function pieceSelector(clicked_id) {
 
 // Funtionen som sørger for at rykke brikkerne rundt.
 // Dette burde kunne optrimeres ved chosenPiece[]
-// men det virker tilsyndelandende ikke.
+// men det virker tilsyndelandende ikke
+// da man for n'de karakter i variablen.
 function movePiece() {
   // Spiller 1 - blå
   //Tjekker om alle brikker er hjemme.
